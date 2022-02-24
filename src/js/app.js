@@ -12,10 +12,12 @@ const firstMenu = document.querySelector('.first-menu');
 const thirdMenu = document.querySelector('.third-menu');
 const menuIcons = document.querySelector('.menu-icons');
 const headerList = document.querySelector('.header__list');
+const body = document.querySelector('body');
 
 menu.addEventListener('click', (e)=>{
     menu.classList.toggle('active')
     disableMenu.classList.toggle('active')
+    body.classList.toggle('active')
     firstMenu.classList.toggle('active')
     thirdMenu.classList.toggle('active')
     menuIcons.classList.toggle('active')
