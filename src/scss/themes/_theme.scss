@@ -4,11 +4,17 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     &:focus,
     &:active{
         outline: none;
     }
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
 }
 html,
 body{
