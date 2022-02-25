@@ -4,7 +4,21 @@ mixin download()
             h2.download__title Хотите установить у себя такую систему?
             p.download__desc #[span.download__desc-span Обратитесь к нам!] Мы уже внедрили АСТУЭ/АСКУЭ на ключевых объектах в различных отраслях промышленности
             .download__content 
-                .download__images 
+                .swiper.mySwiper.enable-xl
+                    .swiper-wrapper 
+                        .swiper-slide 
+                            img(src="@img/download-img_1.png", alt="")
+                        .swiper-slide 
+                            img(src="@img/download-img_1.png", alt="")
+                        .swiper-slide 
+                            img(src="@img/download-img_1.png", alt="")
+                        .swiper-slide 
+                            img(src="@img/download-img_1.png", alt="")
+                        .swiper-slide 
+                            img(src="@img/download-img_1.png", alt="")
+                    .swiper-button-next 
+                    .swiper-button-prev 
+                .download__images.disable-xl 
                     .download__left
                         img(src="@img/download-img_1.png", alt="").download__img_large
                     .download__right 

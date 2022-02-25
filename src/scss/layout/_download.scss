@@ -5,6 +5,10 @@
         line-height: 140%;
         color: #222222;
         margin-bottom: 10px;
+        @include media(992){
+            font-size: 22px;
+            line-height: 140%;
+        }
     }
     &__desc{
         font-weight: normal;
@@ -13,6 +17,10 @@
         color: #222222;
         max-width: 700px;
         width: 100%;
+        @include media(992){
+            font-size: 16px;
+            line-height: 150%;
+        }
         &-span{
             font-weight: bold;
         }
@@ -23,13 +31,60 @@
         margin-bottom: 100px;
         background: #222222;
         padding: 50px 70px 60px 70px;
+        @include media(992){
+            margin-top: 20px;
+        }
+        @include media(767){
+            margin-left: -25px;
+            width: calc(100% + 40px);
+            padding: 20px 0 0 0;
+        }
+    }
+    &__img_large{
+        @include media(1400){
+            width: 400px;
+        }
+    }
+    .swiper{
+        padding-top: 60px;
+        &-slide{
+            text-align: center;
+            img{
+                width: 100%;
+            }
+        }
+        &-button-next{
+            right: 15px;
+            top: 25px;
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            &::after{
+                content: '';
+                background: url(../img/next.svg) no-repeat;
+                width: 40px;
+                height: 30px;
+            }
+        }
+        &-button-prev{
+            left: 25px;
+            top: 25px;
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            &::after{
+                content: '';
+                background: url(../img/prev.svg) no-repeat;
+                width: 40px;
+                height: 30px;
+            }
+        }
     }
     &__images{
         display: flex;
         justify-content: space-between;
         align-items: center;
         column-gap: 30px;
-        margin-bottom: 40px;
     }
     &__right{
         display: flex;
@@ -40,6 +95,15 @@
         width: 100%;
     }
     &__infos{
+        margin-top: 40px;
+        @include media(992){
+            margin-top: 30px;
+        }
+        @include media(767){
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 50px;
+        }
         &-title{
             font-weight: bold;
             font-size: 20px;
@@ -68,6 +132,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include media(992){
+            clip-path: none;
+            width: 100%;
+            min-width: 100%;
+            bottom: -16%;
+            height: 108px;
+        }
         &-p{
             font-weight: bold;
             font-size: 16px;
@@ -76,6 +147,13 @@
             color: #FFFFFF;
             max-width: 131px;
             width: 100%;
+            @include media(992){
+                max-width: 100%;
+            }
+            @include media(576){
+                max-width: 215px;
+                width: 100%;
+            }
         }
     }
 }
