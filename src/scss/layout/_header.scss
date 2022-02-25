@@ -1,8 +1,11 @@
 .header{
     position: sticky;
     top: 0;
+    z-index: 99;
     .logo img{
-        width: 100px;
+        @include media(767){
+            width: 100px;
+        }
     }
     background: #222222;
     padding-top: 40px;
@@ -33,7 +36,6 @@
         align-items: center;
         list-style: none;
         transition: 300ms ease;
-        z-index: 2;
         &.active{
             transform: translateX(0);
             opacity: 1;
@@ -65,7 +67,7 @@
         align-items: center;
         @include media(992){
             display: flex;
-            z-index: 3;
+            z-index: 2;
         }
         &-icons{
             transform: skewX(-15deg);
@@ -85,11 +87,11 @@
             transition: 300ms ease;
             &.first-menu.active{
                 transform: rotate(45deg);
-                top: 5px;
+                top: 4px;
             }
             &.third-menu.active{
                 transform: rotate(-45deg);
-                top: -2px;
+                top: -3px;
             }
             &.disable-menu.active{
                 display: none;
@@ -109,7 +111,7 @@
         line-height: 140%;
         color: #FFFFFF;
         transition: 200ms ease;
-        &:hover{
+        &:hover, &:focus{
             color: #B12A5D;
         }
     }

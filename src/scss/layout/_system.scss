@@ -1,0 +1,23 @@
+.system{
+    &__title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 140%;
+        color: #222222;
+        max-width: 800px;
+        width: 100%;
+        margin-bottom: 40px;
+        &-span{
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 140%;
+            color: #A81A47;
+        }
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

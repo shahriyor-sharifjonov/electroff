@@ -25,11 +25,6 @@
             font-size: 25px;
             line-height: 140%;
         }
-        @include media(576){
-            max-width: 290px;
-            width: 100%;
-            margin: 0 auto 30px auto;
-        }
     }
     &__content{
         background: rgba(34, 34, 34, 0.15);
@@ -47,9 +42,12 @@
             width: 100%;
             padding: 40px 0;
             @include media(1200){
-                flex-direction: column;
+                flex-wrap: wrap;
                 row-gap: 30px;
                 padding: 30px 0;
+            }
+            @include media(767){
+                flex-direction: column;
             }
         }
     }
@@ -57,6 +55,13 @@
         display: flex;
         align-items: center;
         column-gap: 15px;
+        @include media(1200){
+            width: 50%;
+            justify-content: center;
+        }
+        @include media(767){
+            width: 100%;
+        }
         &-p{
             max-width: 202px;
             width: 100%;
@@ -94,8 +99,12 @@
                 line-height: 150%;
             }
             @include media(576){
-                max-width: 290px;
-                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        &-btn{
+            @include media(576){
+                width: 290px;
                 margin: 0 auto;
             }
         }
