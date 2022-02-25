@@ -45,6 +45,10 @@
             padding: 40px 15px;
             row-gap: 30px;
         }
+        @include media(767){
+            margin-left: -15px;
+            width: calc(100% + 30px);
+        }
         &::before{
             content: '';
             position: absolute;
@@ -124,7 +128,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        row-gap: 35px;
+        row-gap: 30px;
     }
     &__item{
         background: rgba(255, 255, 255, 0.3);

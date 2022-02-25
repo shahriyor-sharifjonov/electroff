@@ -1,0 +1,72 @@
+.adventages{
+    background: url(../img/adventages-bg.png) center / cover no-repeat;
+    &__title{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+        max-width: 1032px;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        @include media(992){
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 140%;
+            margin-bottom: 50px;
+        }
+        @include media(767){
+            text-align: left;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        column-gap: 30px;
+        @include media(992){
+            flex-direction: column;
+            row-gap: 40px;
+        }
+    }
+    &__item{
+        position: relative;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(20px);
+        max-width: 370px;
+        width: 100%;
+        height: 225px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        @include media(576){
+            width: calc(100% + 30px);
+            max-width: calc(100% + 30px);
+            margin-left: 0;
+        }
+    }
+    &-icon{
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+    }
+    &__p{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        color: #FFFFFF;
+    }
+    &__span{
+        font-weight: bold;
+    }
+    &__btn{
+        margin: 0 auto;
+    }
+}
