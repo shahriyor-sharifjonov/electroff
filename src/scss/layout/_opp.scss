@@ -47,8 +47,10 @@
             margin-bottom: 30px;
         }
         img{
-            width: 300px;
-            height: 300px;
+            @include media(1200){
+                width: 300px;
+                height: 300px;
+            }
         }
     }
     &__items{
@@ -132,7 +134,7 @@
         }
         &_3{
             position: absolute;
-            bottom: 0px;
+            bottom: -67px;
             right: -117px;
             &::before{
                 content: '';
