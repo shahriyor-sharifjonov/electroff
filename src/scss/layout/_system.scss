@@ -1,4 +1,7 @@
 .system{
+    @include media(992){
+        margin-bottom: 35px;
+    }
     &__title{
         font-style: normal;
         font-weight: bold;
@@ -334,7 +337,7 @@
             }
             @include media(992){
                 left: 50%;
-
+                
             }
         }
     }
