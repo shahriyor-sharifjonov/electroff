@@ -1614,6 +1614,110 @@
   margin: 0 auto 30px auto;
 }
 
+.no-webp .partner {
+  background: url(../img/partner-bg.png) center/cover no-repeat; }
+
+.partner {
+  width: 100%;
+  position: relative;
+}
+
+.partner__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.partner__left-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 140%;
+  color: #FFFFFF;
+  margin-bottom: 70px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.partner__texts {
+  margin-left: 70px;
+}
+
+.partner__texts-span {
+  display: block;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 140%;
+  color: #A81A47;
+  margin-bottom: 5px;
+}
+
+.partner__texts-p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  max-width: 345px;
+  width: 100%;
+}
+
+.partner__right {
+  max-width: 570px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 375px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+
+.partner__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 55px;
+     -moz-column-gap: 55px;
+          column-gap: 55px;
+}
+
+.partner__item-p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+  max-width: 400px;
+  width: 100%;
+}
+
+.partner__item-span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.partner__icon {
+  margin-left: -15px;
+}
+
 .section {
   padding: 100px 0;
 }
@@ -1728,6 +1832,12 @@ button {
   }
 }
 
+@media (max-width: 1700px) {
+  .partner__right {
+    right: 150px;
+  }
+}
+
 @media (max-width: 1430px) {
   .system__item:nth-of-type(2)::before {
     right: -30px;
@@ -1749,6 +1859,10 @@ button {
 
   .download__img_large {
     width: 400px;
+  }
+
+  .partner__right {
+    right: 100px;
   }
 }
 
@@ -1845,6 +1959,14 @@ button {
   .opp__item .opp__p {
     font-size: 14px;
     line-height: 150%;
+  }
+
+  .partner__texts {
+    margin-left: 0;
+  }
+
+  .partner__right {
+    right: 0;
   }
 }
 
@@ -2296,6 +2418,54 @@ button {
             flex-direction: column;
   }
 
+  .partner__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .partner__left-title {
+    font-size: 22px;
+    line-height: 140%;
+    margin-bottom: 30px;
+  }
+
+  .partner__right {
+    background: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    padding-top: 30px;
+    padding-bottom: 0;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .partner__item {
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .partner__item-p {
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    padding: 40px 12px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .partner__icon {
+    display: none;
+  }
+
   .section {
     padding: 50px 0;
   }
@@ -2403,6 +2573,24 @@ button {
     padding: 30px 15px;
   }
 
+  .partner__texts-span {
+    font-size: 22px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+
+  .partner__item-p {
+    font-size: 14px;
+    font-size: 14px;
+    margin-left: -15px;
+    min-width: calc(100% + 30px);
+    width: calc(100% + 30px);
+  }
+
+  .partner__item-span {
+    text-decoration: none;
+  }
+
   .btn {
     font-size: 14px;
     line-height: 19px;
@@ -2487,3 +2675,5 @@ button {
 .webp .earn__content::before { background: url(../img/earn-circle-bg.webp); }
 
 .webp .adventages { background: url(../img/adventages-bg.webp) center/cover no-repeat; }
+
+.webp .partner { background: url(../img/partner-bg.webp) center/cover no-repeat; }
