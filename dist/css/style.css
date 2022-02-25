@@ -857,12 +857,27 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.compare__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
+}
+
+.compare__img {
+  max-width: 450px;
+  width: 100%;
 }
 
 .compare__item-title {
@@ -904,6 +919,22 @@
   line-height: 150%;
   text-align: center;
   color: #FFFFFF;
+}
+
+.compare__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 70px;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
 }
 
 .compare__info {
@@ -1116,6 +1147,19 @@ button {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+
+  .compare__top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .compare__bottom {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 0;
   }
 }
 
@@ -1338,6 +1382,42 @@ button {
 
   .system__right2-btn {
     left: 50%;
+  }
+
+  .compare__title {
+    font-size: 22px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  .compare__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .compare__item-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .compare__polygon {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+
+  .compare__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .section {
