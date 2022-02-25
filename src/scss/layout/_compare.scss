@@ -66,6 +66,7 @@
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         @include media(992){
             clip-path: none;
+            min-width: 100%;
         }
         &-p{
             font-weight: bold;
@@ -88,7 +89,7 @@
         @include media(992){
             flex-direction: column;
             row-gap: 20px;
-            align-items: center;
+            align-items: stretch;
         }
     }
     &__info{
@@ -98,6 +99,12 @@
         padding: 36px 30px;
         max-width: 500px;
         width: 100%;
+        @include media(992){
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__p{
         font-weight: normal;

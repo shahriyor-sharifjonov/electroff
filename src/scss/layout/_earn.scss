@@ -1,0 +1,156 @@
+.earn{
+    &__title{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 140%;
+        color: #222222;
+        margin-bottom: 10px;
+        max-width: 565px;
+        width: 100%;
+        @include media(992){
+            font-size: 22px;
+            line-height: 140%;
+            margin-bottom: 10px;
+        }
+        &-span{
+            color: #A81A47;
+        }
+    }
+    &__desc{
+        font-size: 20px;
+        line-height: 150%;
+        color: #222222;
+        margin-bottom: 50px;
+        @include media(992){
+            margin-bottom: 30px;
+        }
+        @include media(767){
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #263D4F;
+        width: 100%;
+        padding: 50px 100px;
+        position: relative;
+        @include media(1200){
+            padding: 50px 70px;
+        }
+        @include media(992){
+            flex-direction: column;
+            padding: 40px 15px;
+            row-gap: 30px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 82px;
+            height: 82px;
+            background: url(../img/earn-circle-bg.png);
+            border-radius: 50%;
+            right: 30%;
+            top: 30%;
+        }
+        &-title{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 140%;
+            color: #FFFFFF;
+            max-width: 620px;
+            width: 100%;
+            margin-bottom: 20px;
+            @include media(992){
+                font-size: 20px;
+                line-height: 140%;
+            }
+        }
+        &-p{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+            max-width: 600px;
+            width: 100%;
+            @include media(992){
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+    }
+    &__bottom{
+        margin-top: 100px;
+        @include media(767){
+            margin-top: 50px;
+        }
+        &-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include media(992){
+                flex-direction: column;
+                row-gap: 30px;
+            }
+        }
+        &-title{
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 140%;
+            margin-bottom: 40px;
+            @include media(992){
+                font-size: 22px;
+                line-height: 140%;
+                margin-bottom: 20px;
+            }
+        }
+        &-p{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: #222222;
+            max-width: 520px;
+            width: 100%;
+        }
+        &-span{
+            font-weight: bold;
+        }
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 35px;
+    }
+    &__item{
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(20px);
+        padding: 20px 100px 20px 70px;
+        max-width: max-content;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        @include media(992){
+            padding: 20px 39px 20px 49px;
+        }
+        @include media(360){
+            padding: 20px;
+        }
+        &-p{
+            font-size: 20px;
+            line-height: 150%;
+            color: #222222;
+            @include media(992){
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 150%;
+            }
+        }
+    }
+}
