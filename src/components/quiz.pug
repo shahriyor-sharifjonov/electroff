@@ -3,16 +3,18 @@ mixin quiz()
         .quiz__body.container   
             h2.quiz__title Ответьте на несколько вопросов для расчета стоимости вашего проекта АСТУЭ/АСКУЭ
             .quiz__item 
-                .quiz__left 
-                    h2.quiz__left-title #[span.quiz__left-span Расчет стоимости АСТУЭ/АСКУЭ]  начинается с понимания ваших задач
-                    p.quiz__left-p Для расчета также нужно знать параметры вашего объекта 
-                    .quiz__left-polygon 
-                        p.quiz__left-polygon-p При заказе расчета  — #[br] инструкция по выбору ценовой категории в подарок!
-                .quiz__right 
-                    .quiz__right-row.quiz__right-row_1 
-                        img(src="@img/quiz-img.png", alt="").quiz__img
-                        h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
-                    .quiz__right-row
-                        h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
-                        p.quiz__right-p #[span.quiz__right-primary Буду благодарен, если уделите немного времени и ответите на несколько вопросов.] Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
-                        p.quiz__right-p После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span Расчет стоимости АСТУЭ/АСКУЭ]  начинается с понимания ваших задач
+                        p.quiz__left-p Для расчета также нужно знать параметры вашего объекта 
+                        .quiz__left-polygon 
+                            p.quiz__left-polygon-p При заказе расчета  — #[br] инструкция по выбору ценовой категории в подарок!
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
+                            p.quiz__right-p #[span.quiz__right-primary Буду благодарен, если уделите немного времени и ответите на несколько вопросов.] Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
+                            p.quiz__right-p После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) 
+                a(href="#!").quiz__btn.btn Перейти к вопросам
