@@ -43,3 +43,30 @@ document.querySelectorAll('.partner__item').forEach( function ( el ) {
     info.classList.remove('active');
   });
 })
+
+document.querySelectorAll('.quiz').forEach(function ( el ) {
+  const item = el.querySelectorAll('.quiz__item');
+  const next = el.querySelectorAll('.quiz__next');
+  const prev = el.querySelectorAll('.quiz__prev');
+  next.forEach( function ( next ) {
+    next.addEventListener('click', function ( e ) {
+      for (let i = 0; i < item.length; i++) {
+        if ( item[i].classList.contains('active') && !item[i].classList.contains('last') ) {
+          item[i].classList.remove('active');
+          item[i += 1].classList.add('active');
+        }
+      }
+    })
+  })
+
+  prev.forEach( function ( prev ) {
+    prev.addEventListener('click', function ( e ) {
+      for (let i = 0; i < item.length; i++) {
+        if ( item[i].classList.contains('active') && i > 0 ) {
+          item[i].classList.remove('active');
+          item[i -= 1].classList.add('active');
+        }
+      }
+    })
+  })
+})

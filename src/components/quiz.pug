@@ -1,8 +1,8 @@
 mixin quiz()
     .quiz.section 
-        .quiz__body.container   
+        form(action="").quiz__body.container   
             h2.quiz__title Ответьте на несколько вопросов для расчета стоимости вашего проекта АСТУЭ/АСКУЭ
-            .quiz__item 
+            .quiz__item.active 
                 .quiz__item-content 
                     .quiz__left 
                         h2.quiz__left-title #[span.quiz__left-span Расчет стоимости АСТУЭ/АСКУЭ]  начинается с понимания ваших задач
@@ -17,4 +17,365 @@ mixin quiz()
                             h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
                             p.quiz__right-p #[span.quiz__right-primary Буду благодарен, если уделите немного времени и ответите на несколько вопросов.] Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
                             p.quiz__right-p После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) 
-                a(href="#!").quiz__btn.btn Перейти к вопросам
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__next Перейти к вопросам
+            .quiz__item.quiz__item_2
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span Какая система]  вам нужна?
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="system-1" id="system-1").quiz__item_2-input
+                            label(for="system-1").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="system-2" id="system-2").quiz__item_2-input
+                            label(for="system-2").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                        p.quiz__item_2-desc Вы можете отметить оба варианта
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_3
+                h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-1").quiz__item_3-input
+                            label(for="object-1").quiz__item_3-p Промышленное предприятие 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-2").quiz__item_3-input
+                            label(for="object-2").quiz__item_3-p Электросетевая компания 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-3").quiz__item_3-input
+                            label(for="object-3").quiz__item_3-p Технопарк 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-4").quiz__item_3-input
+                            label(for="object-4").quiz__item_3-p Торговый центр
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-5").quiz__item_3-input
+                            label(for="object-5").quiz__item_3-p Коммерческие, офисные помещения 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-6").quiz__item_3-input
+                            label(for="object-6").quiz__item_3-p Другое 
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_4
+                h2.quiz__left-title Укажите #[span.quiz__left-span площадь]  объекта
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__progress 
+                            .quiz__progress-bar 
+                                .quiz__progress-track 
+                            .quiz__progress-values 
+                                span.quiz__progress-value 100 м#[sup 2]
+                                span.quiz__progress-value 100 000 м#[sup 2]
+                        input(type="number" placeholder="50 000" name="area").quiz__item_4-input
+                        h3.quiz__item_4-subtitle Укажите ваш регион
+                        input(type="text" placeholder="Ваш регион" name="region").quiz__item_4-input_2
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_5
+                h2.quiz__left-title #[span.quiz__left-span Какое количество приборов учета]  вы планируете поставить на объекте?
+                .quiz__item-content 
+                    .quiz__left 
+                        input(type="text" placeholder="Укажите количество приборов" name="pribor").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_6
+                h2.quiz__left-title #[span.quiz__left-span С какой целью] вы планируете внедрить АСКУЭ?
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="object" id="object-1").quiz__item_6-input
+                            label(for="object-1").quiz__item_6-p Передавать почасовые отчеты в энергосбыт
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="object" id="object-2").quiz__item_6-input
+                            label(for="object-2").quiz__item_6-p Обеспечить контроль качества электроэнергии 
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="object" id="object-3").quiz__item_6-input
+                            label(for="object-3").quiz__item_6-p Получить дешевые тарифы на электроэнергию
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="object" id="object-4").quiz__item_6-input
+                            label(for="object-4").quiz__item_6-p Контролировать работу оборудования
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="object" id="object-5").quiz__item_6-input
+                            label(for="object-5").quiz__item_6-p Просто собирать данные со счетчиков 
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="object" id="object-6").quiz__item_6-input
+                            label(for="object-6").quiz__item_6-p Другое 
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_7.last
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__left-item 
+                            h2.quiz__item-title Введите ваше имя
+                            input(type="text" placeholder="Имя Фамилия" name="name").quiz__item-input
+                        .quiz__left-item 
+                            h2.quiz__item-title Где удобно получить консультацию?
+                            .quiz__item-socials 
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-1")
+                                    label(for="socialMedia-1").quiz__item-p What’s app
+                                    label(for="socialMedia-1").quiz__item-icon 
+                                        img(src="@img/whatsapp.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-2")
+                                    label(for="socialMedia-2").quiz__item-p Telegram
+                                    label(for="socialMedia-2").quiz__item-icon 
+                                        img(src="@img/telegram.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-3")
+                                    label(for="socialMedia-3").quiz__item-p Zoom / Skype
+                                    label(for="socialMedia-3").quiz__item-icon 
+                                        img(src="@img/skype.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-4")
+                                    label(for="socialMedia-4").quiz__item-p По телефону
+                                    label(for="socialMedia-4").quiz__item-icon 
+                                        img(src="@img/phone.png", alt="") 
+                        .quiz__left-item    
+                            h2.quiz__item-title Укажите ваш контактный номер
+                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input
+                        .quiz__left-item 
+                            h2.quiz__item-title Укажите, из какой вы компании
+                            input(type="text" name="company" placeholder="Поле для ответа").quiz__item-input
+                    .quiz__right
+                        h2.quiz__left-title #[span.quiz__left-span Ваш расчет АСКУЭ почти готов. ] Для его получения, пожалуйста, введите свои данные  
+                        .quiz__right-content
+                            .quiz__right-row.quiz__right-row_1 
+                                img(src="@img/quiz-img.png", alt="").quiz__img
+                                h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            .quiz__right-row
+                                h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                                p.quiz__right-p #[span.quiz__right-primary Благодарю вас за ответы!] Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Отправить
+
+mixin quiz2()
+    .quiz.section 
+        form(action="").quiz__body.container   
+            h2.quiz__title Ответьте на несколько вопросов для расчета стоимости вашего проекта АСТУЭ/АСКУЭ
+            .quiz__item.active 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span Расчет стоимости АСТУЭ/АСКУЭ]  начинается с понимания ваших задач
+                        p.quiz__left-p Для расчета также нужно знать параметры вашего объекта 
+                        .quiz__left-polygon 
+                            p.quiz__left-polygon-p При заказе расчета  — #[br] инструкция по выбору ценовой категории в подарок!
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
+                            p.quiz__right-p #[span.quiz__right-primary Буду благодарен, если уделите немного времени и ответите на несколько вопросов.] Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
+                            p.quiz__right-p После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) 
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__next Перейти к вопросам
+            .quiz__item.quiz__item_2
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span Какая система]  вам нужна?
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="system-12" id="system-12").quiz__item_2-input
+                            label(for="system-12").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="system-22" id="system-22").quiz__item_2-input
+                            label(for="system-22").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                        p.quiz__item_2-desc Вы можете отметить оба варианта
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_3
+                h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-12").quiz__item_3-input
+                            label(for="object-12").quiz__item_3-p Промышленное предприятие 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-22").quiz__item_3-input
+                            label(for="object-22").quiz__item_3-p Электросетевая компания 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-32").quiz__item_3-input
+                            label(for="object-32").quiz__item_3-p Технопарк 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-42").quiz__item_3-input
+                            label(for="object-42").quiz__item_3-p Торговый центр
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-52").quiz__item_3-input
+                            label(for="object-52").quiz__item_3-p Коммерческие, офисные помещения 
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="object" id="object-62").quiz__item_3-input
+                            label(for="object-62").quiz__item_3-p Другое 
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_4
+                h2.quiz__left-title Укажите #[span.quiz__left-span площадь]  объекта
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__progress 
+                            .quiz__progress-bar 
+                                .quiz__progress-track 
+                            .quiz__progress-values 
+                                span.quiz__progress-value 100 м#[sup 2]
+                                span.quiz__progress-value 100 000 м#[sup 2]
+                        input(type="number" placeholder="50 000" name="area").quiz__item_4-input
+                        h3.quiz__item_4-subtitle Укажите ваш регион
+                        input(type="text" placeholder="Ваш регион" name="region").quiz__item_4-input_2
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_5
+                h2.quiz__left-title #[span.quiz__left-span Какое количество приборов учета]  вы планируете поставить на объекте?
+                .quiz__item-content 
+                    .quiz__left 
+                        input(type="text" placeholder="Укажите количество приборов" name="pribor").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_6
+                h2.quiz__left-title #[span.quiz__left-span С какой целью] вы планируете внедрить АСКУЭ?
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="plan" id="plan-12").quiz__item_6-input
+                            label(for="plan-12").quiz__item_6-p Передавать почасовые отчеты в энергосбыт
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="plan" id="plan-22").quiz__item_6-input
+                            label(for="plan-22").quiz__item_6-p Обеспечить контроль качества электроэнергии 
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="plan" id="plan-32").quiz__item_6-input
+                            label(for="plan-32").quiz__item_6-p Получить дешевые тарифы на электроэнергию
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="plan" id="plan-42").quiz__item_6-input
+                            label(for="plan-42").quiz__item_6-p Контролировать работу оборудования
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="plan" id="plan-52").quiz__item_6-input
+                            label(for="plan-52").quiz__item_6-p Просто собирать данные со счетчиков 
+                        .quiz__item_6-checkbox
+                            input(type="radio" name="plan" id="plan-62").quiz__item_6-input
+                            label(for="plan-62").quiz__item_6-p Другое 
+                    .quiz__right 
+                        .quiz__right-row.quiz__right-row_1 
+                            img(src="@img/quiz-img.png", alt="").quiz__img
+                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Далее
+            .quiz__item.quiz__item_7.last
+                .quiz__item-content 
+                    .quiz__left 
+                        .quiz__left-item 
+                            h2.quiz__item-title Введите ваше имя
+                            input(type="text" placeholder="Имя Фамилия" name="name").quiz__item-input
+                        .quiz__left-item 
+                            h2.quiz__item-title Где удобно получить консультацию?
+                            .quiz__item-socials 
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-12")
+                                    label(for="socialMedia-12").quiz__item-p What’s app
+                                    label(for="socialMedia-12").quiz__item-icon 
+                                        img(src="@img/whatsapp.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-22")
+                                    label(for="socialMedia-22").quiz__item-p Telegram
+                                    label(for="socialMedia-22").quiz__item-icon 
+                                        img(src="@img/telegram.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-32")
+                                    label(for="socialMedia-32").quiz__item-p Zoom / Skype
+                                    label(for="socialMedia-32").quiz__item-icon 
+                                        img(src="@img/skype.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-42")
+                                    label(for="socialMedia-42").quiz__item-p По телефону
+                                    label(for="socialMedia-42").quiz__item-icon 
+                                        img(src="@img/phone.png", alt="") 
+                        .quiz__left-item    
+                            h2.quiz__item-title Укажите ваш контактный номер
+                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input
+                        .quiz__left-item 
+                            h2.quiz__item-title Укажите, из какой вы компании
+                            input(type="text" name="company" placeholder="Поле для ответа").quiz__item-input
+                    .quiz__right
+                        h2.quiz__left-title #[span.quiz__left-span Ваш расчет АСКУЭ почти готов. ] Для его получения, пожалуйста, введите свои данные  
+                        .quiz__right-content
+                            .quiz__right-row.quiz__right-row_1 
+                                img(src="@img/quiz-img.png", alt="").quiz__img
+                                h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                            .quiz__right-row
+                                h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                                p.quiz__right-p #[span.quiz__right-primary Благодарю вас за ответы!] Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.
+                .quiz__buttons
+                    a(href="#!").quiz__btn.btn.quiz__prev Назад
+                    a(href="#!").quiz__btn.btn.quiz__next Отправить
