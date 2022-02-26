@@ -17,8 +17,8 @@ input{
             &::after{
                 content: '';
                 position: absolute;
-                min-width: 8px;
                 width: 8px;
+                min-width: 8px;
                 height: 8px;
                 border-radius: 50%;
                 background: linear-gradient(180deg, #B9476B 0%, #A81A47 95.13%);
@@ -28,18 +28,19 @@ input{
                 transform: translate(-50%, -50%);
             }
         }
-    }&[type="checkbox"]{
+    }
+    &[type="checkbox"]{
         appearance: none;
         border: 1px solid #222222;
         border-radius: 5px;
         width: 16px;
+        min-width: 16px;
         height: 16px;
         position: relative;
         &:checked{
             &::after{
                 content: '';
                 position: absolute;
-                min-width: 8px;
                 width: 8px;
                 height: 8px;
                 border-radius: 5px;
