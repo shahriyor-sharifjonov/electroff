@@ -57,8 +57,6 @@
     &__right{
         max-width: 570px;
         width: 100%;
-        background: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(20px);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -68,6 +66,22 @@
         display: flex;
         flex-direction: column;
         row-gap: 30px;
+        isolation: isolate;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;  
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(20px);
+            @include media(992){
+                display: none;
+            }
+        }
         @include media(1700){
             right: 150px;
         }
@@ -130,6 +144,47 @@
         margin-left: -15px;
         @include media(992){
             display: none;
+        }
+    }
+    &__info{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -530px;
+        z-index: 5;
+        padding: 50px 40px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(20px);
+        isolation: isolate;
+        visibility: hidden;
+        opacity: 0;
+        transition: 200ms ease;
+        &.active{
+            opacity: 1;
+            visibility: visible;
+            transition: 200ms ease;
+            @include media(992){
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;  
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+        }
+        &-p{
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+            max-width: 352px;
+            width: 100%;
         }
     }
 }

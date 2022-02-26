@@ -31,3 +31,15 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+const title = document.querySelector('.intro__title');
+
+
+document.querySelectorAll('.partner__item').forEach( function ( el ) {
+  const info = el.querySelector('.partner__info');
+  el.addEventListener('mouseenter', ( e ) => {
+    info.classList.add('active');
+  });
+  el.addEventListener('mouseleave', ( e ) => {
+    info.classList.remove('active');
+  });
+})
