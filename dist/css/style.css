@@ -2787,6 +2787,7 @@ input[type=radio] {
   border: 1px solid #222222;
   border-radius: 50%;
   width: 16px;
+  min-width: 16px;
   height: 16px;
   position: relative;
 }
@@ -2794,7 +2795,6 @@ input[type=radio] {
 input[type=radio]:checked::after {
   content: "";
   position: absolute;
-  min-width: 8px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -2817,6 +2817,7 @@ input[type=checkbox] {
   border: 1px solid #222222;
   border-radius: 5px;
   width: 16px;
+  min-width: 16px;
   height: 16px;
   position: relative;
 }
@@ -2824,7 +2825,6 @@ input[type=checkbox] {
 input[type=checkbox]:checked::after {
   content: "";
   position: absolute;
-  min-width: 8px;
   width: 8px;
   height: 8px;
   border-radius: 5px;

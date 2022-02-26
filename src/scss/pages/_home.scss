@@ -11,6 +11,7 @@ input{
         border: 1px solid #222222;
         border-radius: 50%;
         width: 16px;
+        min-width: 16px;
         height: 16px;
         position: relative;
         &:checked{
@@ -18,7 +19,6 @@ input{
                 content: '';
                 position: absolute;
                 width: 8px;
-                min-width: 8px;
                 height: 8px;
                 border-radius: 50%;
                 background: linear-gradient(180deg, #B9476B 0%, #A81A47 95.13%);
