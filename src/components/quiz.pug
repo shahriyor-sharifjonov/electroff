@@ -76,12 +76,11 @@ mixin quiz()
                 .quiz__item-content 
                     .quiz__left 
                         .quiz__progress 
-                            .quiz__progress-bar 
-                                .quiz__progress-track 
+                            input(type="range" name="area" min="100" max="100000" value="50000").quiz__range
                             .quiz__progress-values 
                                 span.quiz__progress-value 100 м#[sup 2]
                                 span.quiz__progress-value 100 000 м#[sup 2]
-                        input(type="number" placeholder="50 000" name="area").quiz__item_4-input
+                        input(type="number" name="area" value="50000" min="100" max="100000" disabled).quiz__item_4-input
                         h3.quiz__item_4-subtitle Укажите ваш регион
                         input(type="text" placeholder="Ваш регион" name="region").quiz__item_4-input_2
                     .quiz__right 
@@ -172,7 +171,7 @@ mixin quiz()
                                         img(src="@img/phone.png", alt="") 
                         .quiz__left-item    
                             h2.quiz__item-title Укажите ваш контактный номер
-                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input
+                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input#tel
                         .quiz__left-item 
                             h2.quiz__item-title Укажите, из какой вы компании
                             input(type="text" name="company" placeholder="Поле для ответа").quiz__item-input
@@ -267,12 +266,11 @@ mixin quiz2()
                 .quiz__item-content 
                     .quiz__left 
                         .quiz__progress 
-                            .quiz__progress-bar 
-                                .quiz__progress-track 
+                            input(type="range" name="area" min="100" max="100000" value="50000").quiz__range
                             .quiz__progress-values 
                                 span.quiz__progress-value 100 м#[sup 2]
                                 span.quiz__progress-value 100 000 м#[sup 2]
-                        input(type="number" placeholder="50 000" name="area").quiz__item_4-input
+                        input(type="number" name="area" value="50000" min="100" max="100000" disabled).quiz__item_4-input
                         h3.quiz__item_4-subtitle Укажите ваш регион
                         input(type="text" placeholder="Ваш регион" name="region").quiz__item_4-input_2
                     .quiz__right 
@@ -363,7 +361,7 @@ mixin quiz2()
                                         img(src="@img/phone.png", alt="") 
                         .quiz__left-item    
                             h2.quiz__item-title Укажите ваш контактный номер
-                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input
+                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input#tel2 
                         .quiz__left-item 
                             h2.quiz__item-title Укажите, из какой вы компании
                             input(type="text" name="company" placeholder="Поле для ответа").quiz__item-input

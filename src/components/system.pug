@@ -11,7 +11,7 @@ mixin system()
                         p.system__left-p Понимаете, что переплачиваете за электроэнергию, но не знаете с чего начать? 
                         p.system__left-desc Как правильно собрать в полном объеме данные с арендаторов? 
                         p.system__left-slogan Энергоаудит — первый шаг к экономии!
-                        a(href="#!").system__left-btn.btn Заказать энергоаудит
+                        button(type='button' data-target="popup").open-popup.system__left-btn.btn Заказать энергоаудит
                     .system__right 
                         h3.system__right-title 
                             span.system__right-primary Вы сможете решить
@@ -62,6 +62,6 @@ mixin system()
                             p.system__right2-info 
                                 span.system__right2-info-p Мы определим узкие места и дадим рекомендации 
                                 | по комплексу мер для оптимизации и экономии.
-                        a(href="#!").system__right2-btn.btn Получить консультацию
+                        button(type='button' data-target="popup").open-popup.system__right2-btn.btn Получить консультацию
                         
 

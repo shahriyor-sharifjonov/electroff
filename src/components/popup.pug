@@ -1,0 +1,58 @@
+mixin popup()
+    .popup#popup 
+        .popup__close 
+        .popup__body 
+            .popup__content.quiz__item_7.quiz__item.active
+                form(action="").quiz__item-content 
+                    .quiz__left  
+                        .quiz__left-item 
+                            h2.quiz__item-title Введите ваше имя
+                            input(type="text" placeholder="Имя Фамилия" name="name" required).quiz__item-input
+                        .quiz__left-item 
+                            h2.quiz__item-title Где удобно получить консультацию?
+                            .quiz__item-socials 
+                                .quiz__item-social  
+                                    input(type="radio" name="socialMedia" id="socialMedia-13" required)
+                                    label(for="socialMedia-13").quiz__item-p What’s app
+                                    label(for="socialMedia-13").quiz__item-icon 
+                                        img(src="@img/whatsapp.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-23" required)
+                                    label(for="socialMedia-23").quiz__item-p Telegram
+                                    label(for="socialMedia-23").quiz__item-icon 
+                                        img(src="@img/telegram.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-33" required)
+                                    label(for="socialMedia-33").quiz__item-p Zoom / Skype
+                                    label(for="socialMedia-33").quiz__item-icon 
+                                        img(src="@img/skype.png", alt="")
+                                .quiz__item-social 
+                                    input(type="radio" name="socialMedia" id="socialMedia-43" required)
+                                    label(for="socialMedia-43").quiz__item-p По телефону
+                                    label(for="socialMedia-43").quiz__item-icon 
+                                        img(src="@img/phone.png", alt="") 
+                        .quiz__left-item    
+                            h2.quiz__item-title Укажите ваш контактный номер
+                            input(type="text" name="numberPhone" placeholder="+7(ххх)ххх–хх–хх" required).quiz__item-input#tel3
+                        .quiz__left-item 
+                            h2.quiz__item-title Приложить чертеж или документацию
+                            .quiz__item-input.file-text Прикрепить документ
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.4" d="M7.06079 27C6.04505 27 5.06981 26.565 4.29256 25.76C2.56921 23.9711 2.56921 21.0614 4.29217 19.2736L17.7301 4.50861C19.8267 2.33574 23.0383 2.53098 25.382 4.95915C26.4322 6.04771 27.0215 7.61703 26.9994 9.26654C26.9773 10.8986 26.3611 12.4606 25.3078 13.5522L15.1519 24.7393C14.8693 25.0527 14.3953 25.067 14.0935 24.773C13.7925 24.4786 13.7779 23.9874 14.0617 23.6751L24.233 12.471C25.0286 11.6463 25.485 10.4763 25.5018 9.24482C25.5186 8.01256 25.0884 6.85075 24.3232 6.05699C22.8855 4.56631 20.5447 3.78572 18.8045 5.59057L5.36702 20.3556C4.21162 21.5541 4.212 23.4791 5.35204 24.6618C5.88666 25.2153 6.52126 25.485 7.19705 25.4427C7.86573 25.4005 8.55312 25.0456 9.13269 24.4444L19.8247 12.6693C20.2122 12.2676 20.991 11.2828 20.1984 10.4608C19.7495 9.99553 19.4342 10.0242 19.3305 10.0331C19.0344 10.0602 18.6884 10.2721 18.3294 10.6448L10.2817 19.5009C9.99755 19.8135 9.52318 19.8287 9.22327 19.5339C8.92188 19.2402 8.90802 18.7482 9.19144 18.4368L17.2538 9.56398C17.8876 8.90503 18.5357 8.54786 19.1954 8.48665C19.7102 8.43936 20.4758 8.55289 21.2568 9.36331C22.416 10.565 22.2718 12.3276 20.8993 13.7509L10.2072 25.5252C9.35361 26.4116 8.32286 26.9264 7.28878 26.9922C7.21277 26.9977 7.13677 27 7.06077 27L7.06079 27Z" fill="#222222"/>
+                                </svg>
+                                input(type="file" name="file" placeholder="Прикрепить документ").file
+                        .quiz__left-item.terms 
+                            p.terms__p * Обязательные поля для заполнения
+                            .terms__row
+                                input(type="checkbox" required)#terms
+                                label(for="terms") Я ознакомлен с политикой конфиденциальности и даю согласие на обработку персональных данных 
+                        button(type="submit").popup__btn.disable-xl Отправить
+                    .quiz__right
+                        .quiz__right-content
+                            .quiz__right-row.quiz__right-row_1 
+                                img(src="@img/quiz-img.png", alt="").quiz__img
+                                h2.quiz__right-title #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель направления...
+                            .quiz__right-row
+                                p.quiz__right-p #[span.quiz__right-primary Благодарю вас за обращение за консультацией!] #[br] Я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00)
+                        button(type="submit").popup__btn.enable-xl Отправить
+                    

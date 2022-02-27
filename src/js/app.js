@@ -70,3 +70,47 @@ document.querySelectorAll('.quiz').forEach(function ( el ) {
     })
   })
 })
+
+
+var phoneMask = IMask(
+  document.getElementById('tel'), {
+    mask: '+{7}(000)000-00-00'
+  }
+); 
+var phoneMask2 = IMask(
+  document.getElementById('tel2'), {
+    mask: '+{7}(000)000-00-00'
+  }
+); 
+var phoneMask3 = IMask(
+  document.getElementById('tel3'), {
+    mask: '+{7}(000)000-00-00'
+  }
+); 
+
+document.querySelectorAll('.quiz').forEach(function(el){
+  const range = el.querySelector('.quiz__range');
+  const input = el.querySelector('.quiz__item_4-input');
+  range.addEventListener('input', function(){
+    input.value = range.value;
+  })
+  input.addEventListener('input', function(){
+    range.value = input.value;
+    if (this.value.length > 6) {
+      this.value = this.value.slice(0,6); 
+    }
+  })
+})
+
+document.querySelectorAll('.open-popup').forEach(function(el){
+  el.addEventListener('click', function(e){
+    const target = el.getAttribute('data-target');
+    document.getElementById(target).classList.add('active');
+    document.body.style.overflowY = "hidden";
+  })
+})
+
+document.querySelector('.popup__close').addEventListener('click', function(el){
+  document.getElementById('popup').classList.remove('active');
+  document.body.style.overflowY = "auto";
+})
