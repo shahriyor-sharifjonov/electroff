@@ -99,6 +99,9 @@ document.querySelectorAll('.quiz').forEach(function(el){
     if (this.value.length > 6) {
       this.value = this.value.slice(0,6); 
     }
+    if (this.value > 100000){
+      this.value = this.value.slice(0,5);
+    }
   })
 })
 
