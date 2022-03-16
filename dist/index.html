@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220301123251">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220301123251">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220316150806">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220316150806">
     <title>Document</title>
   </head>
   <body> 
@@ -77,169 +77,397 @@
                           </div>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель напрвления...</h2>
-                          </div>
                           <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель напрвления...</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Буду благодарен, если уделите немного времени и ответите на несколько вопросов.</span> Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.</p>
+                            <h2 class="quiz__right-title"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Буду благодарен, если уделите немного времени и ответите на несколько вопросов. Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.</p>
                             <p class="quiz__right-p">После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) </p>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__next" href="#!">Перейти к вопросам</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-1">Перейти к вопросам</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_2">
+                    <div class="quiz__item quiz__item_2" id="quiz-1"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
                           <h2 class="quiz__left-title"><span class="quiz__left-span">Какая система</span>  вам нужна?</h2>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_2-input" type="checkbox" name="system-1" id="system-1">
-                            <label class="quiz__item_2-p" for="system-1">Система технологического учета электроэнергии  — АСТУЭ </label>
+                            <input class="quiz__item_2-input" type="checkbox" name="system" id="astue">
+                            <label class="quiz__item_2-p" for="astue">Система технологического учета электроэнергии  — АСТУЭ</label>
                           </div>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_2-input" type="checkbox" name="system-2" id="system-2">
-                            <label class="quiz__item_2-p" for="system-2">Система технологического учета электроэнергии  — АСТУЭ </label>
+                            <input class="quiz__item_2-input" type="checkbox" name="system" id="askue">
+                            <label class="quiz__item_2-p" for="askue">Система коммерческого учета электроэнергии — АСКУЭ</label>
                           </div>
                           <p class="quiz__item_2-desc">Вы можете отметить оба варианта</p>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
                           <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 10%"></div>
+                            </div>
+                            <h2 class="quiz__right-title"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-2">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-2_askue"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> Укажите <span class="quiz__left-span">ваш регион </span></h2>
+                          <input class="quiz__item_5-input" type="text" placeholder="Укажите регион" id="askue-region">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 30%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Правила организации коммерческого учета зависят от региона</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-1">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-3_askue">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-3_askue"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> Укажите <span class="quiz__left-span">ваш регион </span></h2>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="more-670">
+                            <label class="quiz__item_3-p" for="more-670">Свыше 670 кВт</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="less-670">
+                            <label class="quiz__item_3-p" for="less-670">Менее 670 кВт</label>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 50%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Правила организации коммерческого учета зависят от региона</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-2_askue">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-4_askue_more-670">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-4_askue_more-670"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> Какая вам нужна <span class="quiz__left-span">система? </span></h2>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="sistema" id="integralnaya-sistema">
+                            <label class="quiz__item_3-p" for="integralnaya-sistema">Интегральная система</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="sistema" id="intervalnaya-sistema">
+                            <label class="quiz__item_3-p" for="intervalnaya-sistema">Интервальная система</label>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
                             <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-3_askue">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-5_askue_more-670 ">Далее</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_3">
-                      <h2 class="quiz__left-title"><span class="quiz__left-span">На каких объектах</span>  вы планируете устанавливать систему (системы)?</h2>
+                    <div class="quiz__item quiz__item_3" id="quiz-5_askue_more-670"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> <span class="quiz__left-span">Укажите кол-во точек учета </span> на вашем объекте</h2>
+                          <input class="quiz__item_5-input" type="text" placeholder="Укажите количество точек" id="tochki">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4_askue_more-670">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-4_askue_less-670"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> Укажите <span class="quiz__left-span">ваш регион </span></h2>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-1">
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="more-670">
+                            <label class="quiz__item_3-p" for="more-670">Свыше 670 кВт</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="less-670">
+                            <label class="quiz__item_3-p" for="less-670">Менее 670 кВт</label>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Правила организации коммерческого учета зависят от региона</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-1">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-5_askue_less-670">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-2"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title"><span class="quiz__left-span">На каких объектах</span>  вы планируете устанавливать систему (системы)?</h2>
+                          <p class="quiz__right-p">Можно выбрать несколько вариантов ответа</p>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="checkbox" name="object-1" id="object-1">
                             <label class="quiz__item_3-p" for="object-1">Промышленное предприятие </label>
                           </div>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-2">
-                            <label class="quiz__item_3-p" for="object-2">Электросетевая компания </label>
+                            <input class="quiz__item_3-input" type="checkbox" name="object-2" id="object-2">
+                            <label class="quiz__item_3-p" for="object-2">Технопарк</label>
                           </div>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-3">
-                            <label class="quiz__item_3-p" for="object-3">Технопарк </label>
+                            <input class="quiz__item_3-input" type="checkbox" name="object-3" id="object-3">
+                            <label class="quiz__item_3-p" for="object-3">Торговый центр</label>
                           </div>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-4">
-                            <label class="quiz__item_3-p" for="object-4">Торговый центр</label>
+                            <input class="quiz__item_3-input" type="checkbox" name="object-4" id="object-4">
+                            <label class="quiz__item_3-p" for="object-4">Коммерческие, офисные помещения</label>
                           </div>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-5">
-                            <label class="quiz__item_3-p" for="object-5">Коммерческие, офисные помещения </label>
-                          </div>
-                          <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-6">
-                            <label class="quiz__item_3-p" for="object-6">Другое </label>
+                            <input class="quiz__item_3-input" type="checkbox" name="object-5" id="object-5">
+                            <label class="quiz__item_3-p" for="object-5">Другое</label>
                           </div>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 30%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-1">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-3">Далее</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_4">
-                      <h2 class="quiz__left-title">Укажите <span class="quiz__left-span">площадь</span>  объекта</h2>
+                    <div class="quiz__item quiz__item_3" id="quiz-3"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
-                          <div class="quiz__progress"> 
-                            <input class="quiz__range" type="range" name="area" min="100" max="100000" value="50000">
-                            <div class="quiz__progress-values"> <span class="quiz__progress-value">100 м<sup>2</sup></span><span class="quiz__progress-value">100 000 м<sup>2</sup></span></div>
-                          </div>
-                          <input class="quiz__item_4-input" type="number" name="area" value="50000" min="100" max="100000">
-                          <h3 class="quiz__item_4-subtitle">Укажите ваш регион</h3>
-                          <input class="quiz__item_4-input_2" type="text" placeholder="Ваш регион" name="region">
+                          <h2 class="quiz__left-title mb-60" style="max-width: 378px;"><span class="quiz__left-span"> Какое количество приборов учета</span> вы планируете поставить на объекте?</h2>
+                          <input class="quiz__item_5-input" type="text" name="priborov" id="priborov" placeholder="Укажите количество приборов">
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 50%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-4">Далее</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_5">
-                      <h2 class="quiz__left-title"><span class="quiz__left-span">Какое количество приборов учета</span>  вы планируете поставить на объекте?</h2>
+                    <div class="quiz__item quiz__item_3 step" id="quiz-4"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
-                          <input class="quiz__item_5-input" type="text" placeholder="Укажите количество приборов" name="pribor">
+                          <h2 class="quiz__left-title"><span class="quiz__left-span">На каких объектах</span>  вы планируете устанавливать систему (системы)?</h2>
+                          <p class="quiz__p">Можно выбрать несколько вариантов ответа</p>
+                          <div class="step__content">
+                            <div class="step__col">
+                              <div class="step__item" data-target="#quiz-automate">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Автоматизировать контроль и технический учет энергоресурсов на предприятии </div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-glubina">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Обобщать и обрабатывать полученные данные</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-apm-simple">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Понять, где и сколько предприятие потребляет энергоресурсов </div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-apm">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Определить, какая смена/бригада обеспечивает более низкое энергопотребление </div>
+                              </div>
+                            </div>
+                            <div class="step__col">
+                              <div class="step__item" data-target="#quiz-glubina">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Долговременно хранить данные и формировать отчеты по учету энергоресурсов</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-apm-simple">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Отображать данные по расходу энергоресурсов на автоматизированных рабочих местах</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-glubina">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Выявить, отличаются ли затраты энергии при производстве различных продуктов</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-own">
+                                <input class="step__item-chk step__own" type="checkbox">
+                                <div class="step__item-overlay">Свой вариант</div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-3">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-own">Далее</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_6">
-                      <h2 class="quiz__left-title"><span class="quiz__left-span">С какой целью</span> вы планируете внедрить АСКУЭ?</h2>
+                    <div class="quiz__item quiz__item_3" id="quiz-own"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-1">
-                            <label class="quiz__item_6-p" for="plan-1">Передавать почасовые отчеты в энергосбыт</label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-2">
-                            <label class="quiz__item_6-p" for="plan-2">Обеспечить контроль качества электроэнергии </label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-3">
-                            <label class="quiz__item_6-p" for="plan-3">Получить дешевые тарифы на электроэнергию</label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-4">
-                            <label class="quiz__item_6-p" for="plan-4">Контролировать работу оборудования</label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-5">
-                            <label class="quiz__item_6-p" for="plan-5">Просто собирать данные со счетчиков </label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-6">
-                            <label class="quiz__item_6-p" for="plan-6">Другое </label>
-                          </div>
+                          <h2 class="quiz__left-title mb-60"><span class="quiz__left-span">Какая у вас цель внедрения АСТУЭ?</span> Какие аналитические функции должны быть реализованы в вашей системе?</h2>
+                          <textarea class="quiz__item_5-input step__textarea" name="own-variant" placeholder="Введите вашу цель"></textarea>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6">Далее </button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_7 last">
+                    <div class="quiz__item quiz__item_3" id="quiz-glubina"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title"><span class="quiz__left-span">Какова глубина</span> требуемого архива?</h2>
+                          <p class="quiz__right-p">Введите цифры в годах</p>
+                          <input class="quiz__item_5-input" type="text" name="glubina" id="glubina" placeholder="Укажите глубину">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-apm-simple">
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"><span class="quiz__left-span">Какое количество рабочих мест (АРМ)</span> вы хотите использовать?</h2>
+                          <input class="quiz__item_5-input" type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-apm"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"><span class="quiz__left-span">Какое количество рабочих мест (АРМ)</span> вы хотите использовать?</h2>
+                          <input class="quiz__item_5-input" type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-glubina">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-automate"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-30" style="max-width: 500px"><span class="quiz__left-span">Требуется ли вам управление электроприемниками?</span> <br> Вам необходима только функция наблюдения или вы хотите давать обратную связь?  </h2>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="control-electrical" id="control-electrical-yes">
+                            <label class="quiz__item_3-p" for="control-electrical-yes">Да</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="control-electrical" id="control-electrical-no">
+                            <label class="quiz__item_3-p" for="control-electrical-no">Нет </label>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_7 last" id="quiz-6"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
                           <div class="quiz__left-item"> 
@@ -251,7 +479,7 @@
                             <div class="quiz__item-socials"> 
                               <div class="quiz__item-social"> 
                                 <input type="radio" name="socialMedia" id="socialMedia-1">
-                                <label class="quiz__item-p" for="socialMedia-1">What’s app</label>
+                                <label class="quiz__item-p" for="socialMedia-1">What’s app </label>
                                 <label class="quiz__item-icon" for="socialMedia-1"> <picture><source srcset="img/whatsapp.webp" type="image/webp"><img src="img/whatsapp.png" alt=""></picture></label>
                               </div>
                               <div class="quiz__item-social"> 
@@ -282,18 +510,17 @@
                         </div>
                         <div class="quiz__right">
                           <h2 class="quiz__left-title"><span class="quiz__left-span">Ваш расчет АСКУЭ почти готов. </span> Для его получения, пожалуйста, введите свои данные  </h2>
-                          <div class="quiz__right-content">
-                            <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                              <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            </div>
+                          <div class="quiz__right-content"> 
                             <div class="quiz__right-row">
-                              <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                              <p class="quiz__right-p"><span class="quiz__right-primary">Благодарю вас за ответы!</span> Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.</p>
+                              <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела реализации ИР и НКУ</h2>
+                              <p class="quiz__right-p"><span class="quiz__right-primary">Благодарю вас за ответы!</span> <br> Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Отправить</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6">Отправить</button>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -550,7 +777,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="quiz section"> 
+                <div class="quiz_2 section"> 
                   <form class="quiz__body container" action="">  
                     <h2 class="quiz__title">Ответьте на несколько вопросов для расчета стоимости вашего проекта АСТУЭ/АСКУЭ</h2>
                     <div class="quiz__item active"> 
@@ -563,169 +790,397 @@
                           </div>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель напрвления...</h2>
-                          </div>
                           <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель напрвления...</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Буду благодарен, если уделите немного времени и ответите на несколько вопросов.</span> Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.</p>
+                            <h2 class="quiz__right-title"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Буду благодарен, если уделите немного времени и ответите на несколько вопросов. Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.</p>
                             <p class="quiz__right-p">После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) </p>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__next" href="#!">Перейти к вопросам</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-1_2">Перейти к вопросам</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_2">
+                    <div class="quiz__item quiz__item_2" id="quiz-1_2"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
                           <h2 class="quiz__left-title"><span class="quiz__left-span">Какая система</span>  вам нужна?</h2>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_2-input" type="checkbox" name="system-12" id="system-12">
-                            <label class="quiz__item_2-p" for="system-12">Система технологического учета электроэнергии  — АСТУЭ </label>
+                            <input class="quiz__item_2-input" type="checkbox" name="system" id="astue_2">
+                            <label class="quiz__item_2-p" for="astue_2">Система технологического учета электроэнергии  — АСТУЭ</label>
                           </div>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_2-input" type="checkbox" name="system-22" id="system-22">
-                            <label class="quiz__item_2-p" for="system-22">Система технологического учета электроэнергии  — АСТУЭ </label>
+                            <input class="quiz__item_2-input" type="checkbox" name="system" id="askue_2">
+                            <label class="quiz__item_2-p" for="askue_2">Система коммерческого учета электроэнергии — АСКУЭ</label>
                           </div>
                           <p class="quiz__item_2-desc">Вы можете отметить оба варианта</p>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
                           <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 10%"></div>
+                            </div>
+                            <h2 class="quiz__right-title"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-2_2">Далее</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_3">
-                      <h2 class="quiz__left-title"><span class="quiz__left-span">На каких объектах</span>  вы планируете устанавливать систему (системы)?</h2>
+                    <div class="quiz__item quiz__item_3" id="quiz-2_askue_2"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> Укажите <span class="quiz__left-span">ваш регион </span></h2>
+                          <input class="quiz__item_5-input" type="text" placeholder="Укажите регион" id="askue-region">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 30%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Правила организации коммерческого учета зависят от региона</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-1_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-3_askue_2">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-3_askue_2"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> Укажите <span class="quiz__left-span">ваш регион </span></h2>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-12">
-                            <label class="quiz__item_3-p" for="object-12">Промышленное предприятие </label>
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="more-670_2">
+                            <label class="quiz__item_3-p" for="more-670_2">Свыше 670 кВт</label>
                           </div>
                           <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-22">
-                            <label class="quiz__item_3-p" for="object-22">Электросетевая компания </label>
-                          </div>
-                          <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-32">
-                            <label class="quiz__item_3-p" for="object-32">Технопарк </label>
-                          </div>
-                          <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-42">
-                            <label class="quiz__item_3-p" for="object-42">Торговый центр</label>
-                          </div>
-                          <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-52">
-                            <label class="quiz__item_3-p" for="object-52">Коммерческие, офисные помещения </label>
-                          </div>
-                          <div class="quiz__item_2-checkbox">
-                            <input class="quiz__item_3-input" type="radio" name="object" id="object-62">
-                            <label class="quiz__item_3-p" for="object-62">Другое </label>
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="less-670_2">
+                            <label class="quiz__item_3-p" for="less-670_2">Менее 670 кВт</label>
                           </div>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
-                    </div>
-                    <div class="quiz__item quiz__item_4">
-                      <h2 class="quiz__left-title">Укажите <span class="quiz__left-span">площадь</span>  объекта</h2>
-                      <div class="quiz__item-content"> 
-                        <div class="quiz__left"> 
-                          <div class="quiz__progress"> 
-                            <input class="quiz__range" type="range" name="area" min="100" max="100000" value="50000">
-                            <div class="quiz__progress-values"> <span class="quiz__progress-value">100 м<sup>2</sup></span><span class="quiz__progress-value">100 000 м<sup>2</sup></span></div>
-                          </div>
-                          <input class="quiz__item_4-input" type="number" name="area" value="50000" min="100" max="100000">
-                          <h3 class="quiz__item_4-subtitle">Укажите ваш регион</h3>
-                          <input class="quiz__item_4-input_2" type="text" placeholder="Ваш регион" name="region">
-                        </div>
-                        <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 50%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Правила организации коммерческого учета зависят от региона</p>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
-                    </div>
-                    <div class="quiz__item quiz__item_5">
-                      <h2 class="quiz__left-title"><span class="quiz__left-span">Какое количество приборов учета</span>  вы планируете поставить на объекте?</h2>
-                      <div class="quiz__item-content"> 
-                        <div class="quiz__left"> 
-                          <input class="quiz__item_5-input" type="text" placeholder="Укажите количество приборов" name="pribor">
-                        </div>
-                        <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
-                          </div>
-                        </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-2_askue_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-4_askue_more-670_2">Далее</button>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
                     </div>
-                    <div class="quiz__item quiz__item_6">
-                      <h2 class="quiz__left-title"><span class="quiz__left-span">С какой целью</span> вы планируете внедрить АСКУЭ?</h2>
+                    <div class="quiz__item quiz__item_3" id="quiz-4_askue_more-670_2"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-12">
-                            <label class="quiz__item_6-p" for="plan-12">Передавать почасовые отчеты в энергосбыт</label>
+                          <h2 class="quiz__left-title mb-60"> Какая вам нужна <span class="quiz__left-span">система? </span></h2>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="sistema" id="integralnaya-sistema_2">
+                            <label class="quiz__item_3-p" for="integralnaya-sistema_2">Интегральная система</label>
                           </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-22">
-                            <label class="quiz__item_6-p" for="plan-22">Обеспечить контроль качества электроэнергии </label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-32">
-                            <label class="quiz__item_6-p" for="plan-32">Получить дешевые тарифы на электроэнергию</label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-42">
-                            <label class="quiz__item_6-p" for="plan-42">Контролировать работу оборудования</label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-52">
-                            <label class="quiz__item_6-p" for="plan-52">Просто собирать данные со счетчиков </label>
-                          </div>
-                          <div class="quiz__item_6-checkbox">
-                            <input class="quiz__item_6-input" type="radio" name="plan" id="plan-62">
-                            <label class="quiz__item_6-p" for="plan-62">Другое </label>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="sistema" id="intervalnaya-sistema_2">
+                            <label class="quiz__item_3-p" for="intervalnaya-sistema_2">Интервальная система</label>
                           </div>
                         </div>
                         <div class="quiz__right"> 
-                          <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                            <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                          </div>
-                          <div class="quiz__right-row">
-                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
                             <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Далее</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-3_askue_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-5_askue_more-670_2">Далее</button>
+                      </div>
                     </div>
-                    <div class="quiz__item quiz__item_7 last">
+                    <div class="quiz__item quiz__item_3" id="quiz-5_askue_more-670_2"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> <span class="quiz__left-span">Укажите кол-во точек учета </span> на вашем объекте</h2>
+                          <input class="quiz__item_5-input" type="text" placeholder="Укажите количество точек" id="tochki">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p"><span class="quiz__right-primary">Укажите, какая именно вам необходима система?</span> Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4_askue_more-670_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6_2">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-4_askue_less-670_2"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"> Укажите <span class="quiz__left-span">ваш регион </span></h2>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="more-670_2">
+                            <label class="quiz__item_3-p" for="more-670_2">Свыше 670 кВт</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="potreblenie-1" id="less-670_2">
+                            <label class="quiz__item_3-p" for="less-670_2">Менее 670 кВт</label>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Правила организации коммерческого учета зависят от региона</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-1_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-5_askue_less-670_2">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-2_2"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title"><span class="quiz__left-span">На каких объектах</span>  вы планируете устанавливать систему (системы)?</h2>
+                          <p class="quiz__right-p">Можно выбрать несколько вариантов ответа</p>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="checkbox" name="object-1" id="object-1_2">
+                            <label class="quiz__item_3-p" for="object-1_2">Промышленное предприятие </label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="checkbox" name="object-2" id="object-2_2">
+                            <label class="quiz__item_3-p" for="object-2_2">Технопарк</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="checkbox" name="object-3" id="object-3_2">
+                            <label class="quiz__item_3-p" for="object-3_2">Торговый центр</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="checkbox" name="object-4" id="object-4_2">
+                            <label class="quiz__item_3-p" for="object-4_2">Коммерческие, офисные помещения</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="checkbox" name="object-5" id="object-5_2">
+                            <label class="quiz__item_3-p" for="object-5_2">Другое</label>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 30%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-1_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-3_2">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-3_2"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60" style="max-width: 378px;"><span class="quiz__left-span"> Какое количество приборов учета</span> вы планируете поставить на объекте?</h2>
+                          <input class="quiz__item_5-input" type="text" name="priborov" id="priborov" placeholder="Укажите количество приборов">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 50%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-2_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-4_2">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3 step" id="quiz-4_2"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title"><span class="quiz__left-span">На каких объектах</span>  вы планируете устанавливать систему (системы)?</h2>
+                          <p class="quiz__p">Можно выбрать несколько вариантов ответа</p>
+                          <div class="step__content">
+                            <div class="step__col">
+                              <div class="step__item" data-target="#quiz-automate">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Автоматизировать контроль и технический учет энергоресурсов на предприятии </div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-glubina">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Обобщать и обрабатывать полученные данные</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-apm-simple">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Понять, где и сколько предприятие потребляет энергоресурсов </div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-apm">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Определить, какая смена/бригада обеспечивает более низкое энергопотребление </div>
+                              </div>
+                            </div>
+                            <div class="step__col">
+                              <div class="step__item" data-target="#quiz-glubina">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Долговременно хранить данные и формировать отчеты по учету энергоресурсов</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-apm-simple">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Отображать данные по расходу энергоресурсов на автоматизированных рабочих местах</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-glubina">
+                                <input class="step__item-chk" type="checkbox">
+                                <div class="step__item-overlay">Выявить, отличаются ли затраты энергии при производстве различных продуктов</div>
+                              </div>
+                              <div class="step__item" data-target="#quiz-own">
+                                <input class="step__item-chk step__own" type="checkbox">
+                                <div class="step__item-overlay">Свой вариант</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-3">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-own">Далее</button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-own"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"><span class="quiz__left-span">Какая у вас цель внедрения АСТУЭ?</span> Какие аналитические функции должны быть реализованы в вашей системе?</h2>
+                          <textarea class="quiz__item_5-input step__textarea" name="own-variant" placeholder="Введите вашу цель"></textarea>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6_2">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-glubina"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title"><span class="quiz__left-span">Какова глубина</span> требуемого архива?</h2>
+                          <p class="quiz__right-p">Введите цифры в годах</p>
+                          <input class="quiz__item_5-input" type="text" name="glubina" id="glubina" placeholder="Укажите глубину">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6_2">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-apm-simple">
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"><span class="quiz__left-span">Какое количество рабочих мест (АРМ)</span> вы хотите использовать?</h2>
+                          <input class="quiz__item_5-input" type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6_2">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-apm"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-60"><span class="quiz__left-span">Какое количество рабочих мест (АРМ)</span> вы хотите использовать?</h2>
+                          <input class="quiz__item_5-input" type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество">
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 80%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-glubina">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_3" id="quiz-automate"> 
+                      <div class="quiz__item-content"> 
+                        <div class="quiz__left"> 
+                          <h2 class="quiz__left-title mb-30" style="max-width: 500px"><span class="quiz__left-span">Требуется ли вам управление электроприемниками?</span> <br> Вам необходима только функция наблюдения или вы хотите давать обратную связь?  </h2>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="control-electrical" id="control-electrical-yes_2">
+                            <label class="quiz__item_3-p" for="control-electrical-yes_2">Да</label>
+                          </div>
+                          <div class="quiz__item_2-checkbox">
+                            <input class="quiz__item_3-input" type="radio" name="control-electrical" id="control-electrical-no_2">
+                            <label class="quiz__item_3-p" for="control-electrical-no_2">Нет </label>
+                          </div>
+                        </div>
+                        <div class="quiz__right"> 
+                          <div class="quiz__right-row"> 
+                            <div class="quiz__progress"> 
+                              <div class="quiz__progress-track" style="width: 100%"></div>
+                            </div>
+                            <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела <br> реализации ИР и НКУ</h2>
+                            <p class="quiz__right-p">Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz__buttons"> 
+                        <button class="quiz__btn btn quiz__prev" type="button" data-target="#quiz-4_2">Назад</button>
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6_2">Далее </button>
+                      </div>
+                    </div>
+                    <div class="quiz__item quiz__item_7 last" id="quiz-6_2"> 
                       <div class="quiz__item-content"> 
                         <div class="quiz__left"> 
                           <div class="quiz__left-item"> 
@@ -736,24 +1191,24 @@
                             <h2 class="quiz__item-title">Где удобно получить консультацию?</h2>
                             <div class="quiz__item-socials"> 
                               <div class="quiz__item-social"> 
-                                <input type="radio" name="socialMedia" id="socialMedia-12">
-                                <label class="quiz__item-p" for="socialMedia-12">What’s app</label>
-                                <label class="quiz__item-icon" for="socialMedia-12"> <picture><source srcset="img/whatsapp.webp" type="image/webp"><img src="img/whatsapp.png" alt=""></picture></label>
+                                <input type="radio" name="socialMedia" id="socialMedia-1_2">
+                                <label class="quiz__item-p" for="socialMedia-1_2">What’s app </label>
+                                <label class="quiz__item-icon" for="socialMedia-1_2"> <picture><source srcset="img/whatsapp.webp" type="image/webp"><img src="img/whatsapp.png" alt=""></picture></label>
                               </div>
                               <div class="quiz__item-social"> 
-                                <input type="radio" name="socialMedia" id="socialMedia-22">
-                                <label class="quiz__item-p" for="socialMedia-22">Telegram</label>
-                                <label class="quiz__item-icon" for="socialMedia-22"> <picture><source srcset="img/telegram.webp" type="image/webp"><img src="img/telegram.png" alt=""></picture></label>
+                                <input type="radio" name="socialMedia" id="socialMedia-2_2">
+                                <label class="quiz__item-p" for="socialMedia-2_2">Telegram</label>
+                                <label class="quiz__item-icon" for="socialMedia-2_2"> <picture><source srcset="img/telegram.webp" type="image/webp"><img src="img/telegram.png" alt=""></picture></label>
                               </div>
                               <div class="quiz__item-social"> 
-                                <input type="radio" name="socialMedia" id="socialMedia-32">
-                                <label class="quiz__item-p" for="socialMedia-32">Zoom / Skype</label>
-                                <label class="quiz__item-icon" for="socialMedia-32"> <picture><source srcset="img/skype.webp" type="image/webp"><img src="img/skype.png" alt=""></picture></label>
+                                <input type="radio" name="socialMedia" id="socialMedia-3_2">
+                                <label class="quiz__item-p" for="socialMedia-3_2">Zoom / Skype</label>
+                                <label class="quiz__item-icon" for="socialMedia-3_2"> <picture><source srcset="img/skype.webp" type="image/webp"><img src="img/skype.png" alt=""></picture></label>
                               </div>
                               <div class="quiz__item-social"> 
-                                <input type="radio" name="socialMedia" id="socialMedia-42">
-                                <label class="quiz__item-p" for="socialMedia-42">По телефону</label>
-                                <label class="quiz__item-icon" for="socialMedia-42"> <picture><source srcset="img/phone.webp" type="image/webp"><img src="img/phone.png" alt=""></picture></label>
+                                <input type="radio" name="socialMedia" id="socialMedia-4_2">
+                                <label class="quiz__item-p" for="socialMedia-4_2">По телефону</label>
+                                <label class="quiz__item-icon" for="socialMedia-4_2"> <picture><source srcset="img/phone.webp" type="image/webp"><img src="img/phone.png" alt=""></picture></label>
                               </div>
                             </div>
                           </div>
@@ -768,18 +1223,17 @@
                         </div>
                         <div class="quiz__right">
                           <h2 class="quiz__left-title"><span class="quiz__left-span">Ваш расчет АСКУЭ почти готов. </span> Для его получения, пожалуйста, введите свои данные  </h2>
-                          <div class="quiz__right-content">
-                            <div class="quiz__right-row quiz__right-row_1"> <picture><source srcset="img/quiz-img.webp" type="image/webp"><img class="quiz__img" src="img/quiz-img.png" alt=""></picture>
-                              <h2 class="quiz__right-title enable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                            </div>
+                          <div class="quiz__right-content"> 
                             <div class="quiz__right-row">
-                              <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Имя Фамилия,</span> <br> Руководитель проектов по направлению «Системы учета»</h2>
-                              <p class="quiz__right-p"><span class="quiz__right-primary">Благодарю вас за ответы!</span> Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.</p>
+                              <h2 class="quiz__right-title disable-lg"><span class="quiz__right-span">Александр Дмитриевич БОРЗЕНКОВ,</span> <br> Руководитель руководитель отдела реализации ИР и НКУ</h2>
+                              <p class="quiz__right-p"><span class="quiz__right-primary">Благодарю вас за ответы!</span> <br> Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="quiz__buttons"><a class="quiz__btn btn quiz__prev" href="#!">Назад</a><a class="quiz__btn btn quiz__next" href="#!">Отправить</a></div>
+                      <div class="quiz__buttons">
+                        <button class="quiz__btn btn quiz__next" type="button" data-target="#quiz-6_2">Отправить</button>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -885,8 +1339,8 @@
               </div>
             </footer>
     </div>
-    <script src="https://unpkg.com/imask?_v=20220301123251"> </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220301123251"></script>
-    <script src="js/app.min.js?_v=20220301123251"> </script>
+    <script src="https://unpkg.com/imask?_v=20220316150806"> </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220316150806"></script>
+    <script src="js/app.min.js?_v=20220316150806"> </script>
   </body>
 </html>

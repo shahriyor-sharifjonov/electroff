@@ -10,137 +10,312 @@ mixin quiz()
                         .quiz__left-polygon 
                             p.quiz__left-polygon-p При заказе расчета  — #[br] инструкция по выбору ценовой категории в подарок!
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
                         .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
-                            p.quiz__right-p #[span.quiz__right-primary Буду благодарен, если уделите немного времени и ответите на несколько вопросов.] Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
+                            h2.quiz__right-title #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Буду благодарен, если уделите немного времени и ответите на несколько вопросов. Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
                             p.quiz__right-p После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) 
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__next Перейти к вопросам
-            .quiz__item.quiz__item_2
+                    button(type='button' data-target="#quiz-1").quiz__btn.btn.quiz__next Перейти к вопросам
+            
+            
+            
+            .quiz__item.quiz__item_2#quiz-1 
                 .quiz__item-content 
                     .quiz__left 
                         h2.quiz__left-title #[span.quiz__left-span Какая система]  вам нужна?
                         .quiz__item_2-checkbox
-                            input(type="checkbox" name="system-1" id="system-1").quiz__item_2-input
-                            label(for="system-1").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                            input(type="checkbox" name="system").quiz__item_2-input#astue 
+                            label(for="astue").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ
                         .quiz__item_2-checkbox
-                            input(type="checkbox" name="system-2" id="system-2").quiz__item_2-input
-                            label(for="system-2").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                            input(type="checkbox" name="system").quiz__item_2-input#askue 
+                            label(for="askue").quiz__item_2-p Система коммерческого учета электроэнергии — АСКУЭ
                         p.quiz__item_2-desc Вы можете отметить оба варианта
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
                         .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 10%")
+                            h2.quiz__right-title #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_3
-                h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                    button(type='button' data-target="#quiz-2").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-2_askue 
                 .quiz__item-content 
                     .quiz__left 
+                        h2.quiz__left-title.mb-60  Укажите #[span.quiz__left-span ваш регион ]
+                        input(type="text" placeholder="Укажите регион").quiz__item_5-input#askue-region 
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 30%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Правила организации коммерческого учета зависят от региона
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-1").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-3_askue").quiz__btn.btn.quiz__next Далее
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-3_askue 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60  Укажите #[span.quiz__left-span ваш регион ]
                         .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-1").quiz__item_3-input
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#more-670
+                            label(for="more-670").quiz__item_3-p Свыше 670 кВт
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#less-670
+                            label(for="less-670").quiz__item_3-p Менее 670 кВт
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 50%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Правила организации коммерческого учета зависят от региона
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-2_askue").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-4_askue_more-670").quiz__btn.btn.quiz__next Далее
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-4_askue_more-670 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60  Какая вам нужна #[span.quiz__left-span система? ]
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="sistema").quiz__item_3-input#integralnaya-sistema
+                            label(for="integralnaya-sistema").quiz__item_3-p Интегральная система
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="sistema").quiz__item_3-input#intervalnaya-sistema
+                            label(for="intervalnaya-sistema").quiz__item_3-p Интервальная система
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-3_askue").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-5_askue_more-670 ").quiz__btn.btn.quiz__next Далее
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-5_askue_more-670 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60  #[span.quiz__left-span Укажите кол-во точек учета ] на вашем объекте
+                        input(type="text" placeholder="Укажите количество точек").quiz__item_5-input#tochki
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-4_askue_more-670").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6").quiz__btn.btn.quiz__next Далее 
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-4_askue_less-670 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60  Укажите #[span.quiz__left-span ваш регион ]
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#more-670
+                            label(for="more-670").quiz__item_3-p Свыше 670 кВт
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#less-670 
+                            label(for="less-670").quiz__item_3-p Менее 670 кВт
+                    .quiz__right 
+                        .quiz__right-row 
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Правила организации коммерческого учета зависят от региона
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-1").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-5_askue_less-670").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-2 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                        p.quiz__right-p Можно выбрать несколько вариантов ответа
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="object-1" id="object-1").quiz__item_3-input
                             label(for="object-1").quiz__item_3-p Промышленное предприятие 
                         .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-2").quiz__item_3-input
-                            label(for="object-2").quiz__item_3-p Электросетевая компания 
+                            input(type="checkbox" name="object-2" id="object-2").quiz__item_3-input
+                            label(for="object-2").quiz__item_3-p Технопарк
                         .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-3").quiz__item_3-input
-                            label(for="object-3").quiz__item_3-p Технопарк 
+                            input(type="checkbox" name="object-3" id="object-3").quiz__item_3-input
+                            label(for="object-3").quiz__item_3-p Торговый центр
                         .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-4").quiz__item_3-input
-                            label(for="object-4").quiz__item_3-p Торговый центр
+                            input(type="checkbox" name="object-4" id="object-4").quiz__item_3-input
+                            label(for="object-4").quiz__item_3-p Коммерческие, офисные помещения
                         .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-5").quiz__item_3-input
-                            label(for="object-5").quiz__item_3-p Коммерческие, офисные помещения 
-                        .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-6").quiz__item_3-input
-                            label(for="object-6").quiz__item_3-p Другое 
+                            input(type="checkbox" name="object-5" id="object-5").quiz__item_3-input
+                            label(for="object-5").quiz__item_3-p Другое
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 30%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_4
-                h2.quiz__left-title Укажите #[span.quiz__left-span площадь]  объекта
+                    button(type='button' data-target="#quiz-1").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-3").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-3 
                 .quiz__item-content 
                     .quiz__left 
-                        .quiz__progress 
-                            input(type="range" name="area" min="100" max="100000" value="50000").quiz__range
-                            .quiz__progress-values 
-                                span.quiz__progress-value 100 м#[sup 2]
-                                span.quiz__progress-value 100 000 м#[sup 2]
-                        input(type="number" name="area" value="50000" min="100" max="100000").quiz__item_4-input
-                        h3.quiz__item_4-subtitle Укажите ваш регион
-                        input(type="text" placeholder="Ваш регион" name="region").quiz__item_4-input_2
+                        h2.quiz__left-title.mb-60(style="max-width: 378px;") #[span.quiz__left-span  Какое количество приборов учета] вы планируете поставить на объекте?
+                        input(type="text" name="priborov" id="priborov" placeholder="Укажите количество приборов").quiz__item_5-input
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 50%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_5
-                h2.quiz__left-title #[span.quiz__left-span Какое количество приборов учета]  вы планируете поставить на объекте?
+                    button(type='button' data-target="#quiz-2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-4").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3.step#quiz-4 
                 .quiz__item-content 
                     .quiz__left 
-                        input(type="text" placeholder="Укажите количество приборов" name="pribor").quiz__item_5-input
+                        h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                        p.quiz__p Можно выбрать несколько вариантов ответа
+                        .step__content
+                            .step__col
+                                .step__item(data-target="#quiz-automate")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Автоматизировать контроль и технический учет энергоресурсов на предприятии 
+                                .step__item(data-target="#quiz-glubina")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Обобщать и обрабатывать полученные данные
+                                .step__item(data-target="#quiz-apm-simple")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Понять, где и сколько предприятие потребляет энергоресурсов 
+                                .step__item(data-target="#quiz-apm")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Определить, какая смена/бригада обеспечивает более низкое энергопотребление 
+                            .step__col
+                                .step__item(data-target="#quiz-glubina")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Долговременно хранить данные и формировать отчеты по учету энергоресурсов
+                                .step__item(data-target="#quiz-apm-simple")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Отображать данные по расходу энергоресурсов на автоматизированных рабочих местах
+                                .step__item(data-target="#quiz-glubina")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Выявить, отличаются ли затраты энергии при производстве различных продуктов
+                                .step__item(data-target="#quiz-own")
+                                    input(type='checkbox').step__item-chk.step__own
+                                    .step__item-overlay Свой вариант
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_6
-                h2.quiz__left-title #[span.quiz__left-span С какой целью] вы планируете внедрить АСКУЭ?
+                    button(type='button' data-target="#quiz-3").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-own").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-own 
                 .quiz__item-content 
                     .quiz__left 
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-1").quiz__item_6-input
-                            label(for="plan-1").quiz__item_6-p Передавать почасовые отчеты в энергосбыт
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-2").quiz__item_6-input
-                            label(for="plan-2").quiz__item_6-p Обеспечить контроль качества электроэнергии 
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-3").quiz__item_6-input
-                            label(for="plan-3").quiz__item_6-p Получить дешевые тарифы на электроэнергию
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-4").quiz__item_6-input
-                            label(for="plan-4").quiz__item_6-p Контролировать работу оборудования
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-5").quiz__item_6-input
-                            label(for="plan-5").quiz__item_6-p Просто собирать данные со счетчиков 
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-6").quiz__item_6-input
-                            label(for="plan-6").quiz__item_6-p Другое 
+                        h2.quiz__left-title.mb-60 #[span.quiz__left-span Какая у вас цель внедрения АСТУЭ?] Какие аналитические функции должны быть реализованы в вашей системе?
+                        textarea(name="own-variant" placeholder="Введите вашу цель").quiz__item_5-input.step__textarea
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
-                .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_7.last
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6").quiz__btn.btn.quiz__next Далее 
+
+
+                    
+            .quiz__item.quiz__item_3#quiz-glubina  
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span Какова глубина] требуемого архива?
+                        p.quiz__right-p Введите цифры в годах
+                        input(type="text" name="glubina" id="glubina" placeholder="Укажите глубину").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6").quiz__btn.btn.quiz__next Далее 
+
+
+
+            .quiz__item.quiz__item_3#quiz-apm-simple
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60 #[span.quiz__left-span Какое количество рабочих мест (АРМ)] вы хотите использовать?
+                        input(type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6").quiz__btn.btn.quiz__next Далее 
+
+
+            .quiz__item.quiz__item_3#quiz-apm 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60 #[span.quiz__left-span Какое количество рабочих мест (АРМ)] вы хотите использовать?
+                        input(type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-glubina").quiz__btn.btn.quiz__next Далее 
+
+
+            .quiz__item.quiz__item_3#quiz-automate 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title(style="max-width: 500px").mb-30 #[span.quiz__left-span Требуется ли вам управление электроприемниками?] #[br] Вам необходима только функция наблюдения или вы хотите давать обратную связь?  
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="control-electrical" id="control-electrical-yes").quiz__item_3-input
+                            label(for="control-electrical-yes").quiz__item_3-p Да
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="control-electrical" id="control-electrical-no").quiz__item_3-input
+                            label(for="control-electrical-no").quiz__item_3-p Нет 
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6").quiz__btn.btn.quiz__next Далее 
+
+
+
+            .quiz__item.quiz__item_7.last#quiz-6 
                 .quiz__item-content 
                     .quiz__left 
                         .quiz__left-item 
@@ -151,9 +326,9 @@ mixin quiz()
                             .quiz__item-socials 
                                 .quiz__item-social 
                                     input(type="radio" name="socialMedia" id="socialMedia-1")
-                                    label(for="socialMedia-1").quiz__item-p What’s app
+                                    label(for="socialMedia-1").quiz__item-p What’s app 
                                     label(for="socialMedia-1").quiz__item-icon 
-                                        img(src="@img/whatsapp.png", alt="")
+                                        img(src="@img/whatsapp.png", alt="") 
                                 .quiz__item-social 
                                     input(type="radio" name="socialMedia" id="socialMedia-2")
                                     label(for="socialMedia-2").quiz__item-p Telegram
@@ -177,19 +352,17 @@ mixin quiz()
                             input(type="text" name="company" placeholder="Поле для ответа").quiz__item-input
                     .quiz__right
                         h2.quiz__left-title #[span.quiz__left-span Ваш расчет АСКУЭ почти готов. ] Для его получения, пожалуйста, введите свои данные  
-                        .quiz__right-content
-                            .quiz__right-row.quiz__right-row_1 
-                                img(src="@img/quiz-img.png", alt="").quiz__img
-                                h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-content 
                             .quiz__right-row
-                                h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                                p.quiz__right-p #[span.quiz__right-primary Благодарю вас за ответы!] Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.
+                                h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела реализации ИР и НКУ
+                                p.quiz__right-p #[span.quiz__right-primary Благодарю вас за ответы!] #[br] Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Отправить
+                    button(type='button' data-target="#quiz-6").quiz__btn.btn.quiz__next Отправить
+
+
 
 mixin quiz2()
-    .quiz.section 
+    .quiz_2.section 
         form(action="").quiz__body.container   
             h2.quiz__title Ответьте на несколько вопросов для расчета стоимости вашего проекта АСТУЭ/АСКУЭ
             .quiz__item.active 
@@ -200,137 +373,312 @@ mixin quiz2()
                         .quiz__left-polygon 
                             p.quiz__left-polygon-p При заказе расчета  — #[br] инструкция по выбору ценовой категории в подарок!
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
                         .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель напрвления...
-                            p.quiz__right-p #[span.quiz__right-primary Буду благодарен, если уделите немного времени и ответите на несколько вопросов.] Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
+                            h2.quiz__right-title #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Буду благодарен, если уделите немного времени и ответите на несколько вопросов. Это сэкономит ваше и мое время и сделает наше общение максимально эффективным и предметным.
                             p.quiz__right-p После получения ответов на вопросы я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00) 
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__next Перейти к вопросам
-            .quiz__item.quiz__item_2
+                    button(type='button' data-target="#quiz-1_2").quiz__btn.btn.quiz__next Перейти к вопросам
+            
+            
+            
+            .quiz__item.quiz__item_2#quiz-1_2 
                 .quiz__item-content 
                     .quiz__left 
                         h2.quiz__left-title #[span.quiz__left-span Какая система]  вам нужна?
                         .quiz__item_2-checkbox
-                            input(type="checkbox" name="system-12" id="system-12").quiz__item_2-input
-                            label(for="system-12").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                            input(type="checkbox" name="system").quiz__item_2-input#astue_2 
+                            label(for="astue_2").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ
                         .quiz__item_2-checkbox
-                            input(type="checkbox" name="system-22" id="system-22").quiz__item_2-input
-                            label(for="system-22").quiz__item_2-p Система технологического учета электроэнергии  — АСТУЭ 
+                            input(type="checkbox" name="system").quiz__item_2-input#askue_2 
+                            label(for="askue_2").quiz__item_2-p Система коммерческого учета электроэнергии — АСКУЭ
                         p.quiz__item_2-desc Вы можете отметить оба варианта
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
                         .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 10%")
+                            h2.quiz__right-title #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_3
-                h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                    button(type='button' data-target="#quiz-2_2").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-2_askue_2 
                 .quiz__item-content 
                     .quiz__left 
-                        .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-12").quiz__item_3-input
-                            label(for="object-12").quiz__item_3-p Промышленное предприятие 
-                        .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-22").quiz__item_3-input
-                            label(for="object-22").quiz__item_3-p Электросетевая компания 
-                        .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-32").quiz__item_3-input
-                            label(for="object-32").quiz__item_3-p Технопарк 
-                        .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-42").quiz__item_3-input
-                            label(for="object-42").quiz__item_3-p Торговый центр
-                        .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-52").quiz__item_3-input
-                            label(for="object-52").quiz__item_3-p Коммерческие, офисные помещения 
-                        .quiz__item_2-checkbox
-                            input(type="radio" name="object" id="object-62").quiz__item_3-input
-                            label(for="object-62").quiz__item_3-p Другое 
+                        h2.quiz__left-title.mb-60  Укажите #[span.quiz__left-span ваш регион ]
+                        input(type="text" placeholder="Укажите регион").quiz__item_5-input#askue-region 
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 30%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Правила организации коммерческого учета зависят от региона
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_4
-                h2.quiz__left-title Укажите #[span.quiz__left-span площадь]  объекта
+                    button(type='button' data-target="#quiz-1_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-3_askue_2").quiz__btn.btn.quiz__next Далее
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-3_askue_2 
                 .quiz__item-content 
                     .quiz__left 
-                        .quiz__progress 
-                            input(type="range" name="area" min="100" max="100000" value="50000").quiz__range
-                            .quiz__progress-values 
-                                span.quiz__progress-value 100 м#[sup 2]
-                                span.quiz__progress-value 100 000 м#[sup 2]
-                        input(type="number" name="area" value="50000" min="100" max="100000").quiz__item_4-input
-                        h3.quiz__item_4-subtitle Укажите ваш регион
-                        input(type="text" placeholder="Ваш регион" name="region").quiz__item_4-input_2
+                        h2.quiz__left-title.mb-60  Укажите #[span.quiz__left-span ваш регион ]
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#more-670_2
+                            label(for="more-670_2").quiz__item_3-p Свыше 670 кВт
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#less-670_2
+                            label(for="less-670_2").quiz__item_3-p Менее 670 кВт
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                            p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 50%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Правила организации коммерческого учета зависят от региона
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_5
-                h2.quiz__left-title #[span.quiz__left-span Какое количество приборов учета]  вы планируете поставить на объекте?
+                    button(type='button' data-target="#quiz-2_askue_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-4_askue_more-670_2").quiz__btn.btn.quiz__next Далее
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-4_askue_more-670_2 
                 .quiz__item-content 
                     .quiz__left 
-                        input(type="text" placeholder="Укажите количество приборов" name="pribor").quiz__item_5-input
+                        h2.quiz__left-title.mb-60  Какая вам нужна #[span.quiz__left-span система? ]
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="sistema").quiz__item_3-input#integralnaya-sistema_2
+                            label(for="integralnaya-sistema_2").quiz__item_3-p Интегральная система
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="sistema").quiz__item_3-input#intervalnaya-sistema_2
+                            label(for="intervalnaya-sistema_2").quiz__item_3-p Интервальная система
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
                             p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_6
-                h2.quiz__left-title #[span.quiz__left-span С какой целью] вы планируете внедрить АСКУЭ?
+                    button(type='button' data-target="#quiz-3_askue_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-5_askue_more-670_2").quiz__btn.btn.quiz__next Далее
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-5_askue_more-670_2 
                 .quiz__item-content 
                     .quiz__left 
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-12").quiz__item_6-input
-                            label(for="plan-12").quiz__item_6-p Передавать почасовые отчеты в энергосбыт
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-22").quiz__item_6-input
-                            label(for="plan-22").quiz__item_6-p Обеспечить контроль качества электроэнергии 
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-32").quiz__item_6-input
-                            label(for="plan-32").quiz__item_6-p Получить дешевые тарифы на электроэнергию
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-42").quiz__item_6-input
-                            label(for="plan-42").quiz__item_6-p Контролировать работу оборудования
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-52").quiz__item_6-input
-                            label(for="plan-52").quiz__item_6-p Просто собирать данные со счетчиков 
-                        .quiz__item_6-checkbox
-                            input(type="radio" name="plan" id="plan-62").quiz__item_6-input
-                            label(for="plan-62").quiz__item_6-p Другое 
+                        h2.quiz__left-title.mb-60  #[span.quiz__left-span Укажите кол-во точек учета ] на вашем объекте
+                        input(type="text" placeholder="Укажите количество точек").quiz__item_5-input#tochki
                     .quiz__right 
-                        .quiz__right-row.quiz__right-row_1 
-                            img(src="@img/quiz-img.png", alt="").quiz__img
-                            h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                        .quiz__right-row
-                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
                             p.quiz__right-p #[span.quiz__right-primary Укажите, какая именно вам необходима система?] Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Далее
-            .quiz__item.quiz__item_7.last
+                    button(type='button' data-target="#quiz-4_askue_more-670_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6_2").quiz__btn.btn.quiz__next Далее 
+            
+            
+            
+            .quiz__item.quiz__item_3#quiz-4_askue_less-670_2 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60  Укажите #[span.quiz__left-span ваш регион ]
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#more-670_2
+                            label(for="more-670_2").quiz__item_3-p Свыше 670 кВт
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="potreblenie-1").quiz__item_3-input#less-670_2 
+                            label(for="less-670_2").quiz__item_3-p Менее 670 кВт
+                    .quiz__right 
+                        .quiz__right-row 
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Правила организации коммерческого учета зависят от региона
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-1_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-5_askue_less-670_2").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-2_2 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                        p.quiz__right-p Можно выбрать несколько вариантов ответа
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="object-1" id="object-1_2").quiz__item_3-input
+                            label(for="object-1_2").quiz__item_3-p Промышленное предприятие 
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="object-2" id="object-2_2").quiz__item_3-input
+                            label(for="object-2_2").quiz__item_3-p Технопарк
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="object-3" id="object-3_2").quiz__item_3-input
+                            label(for="object-3_2").quiz__item_3-p Торговый центр
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="object-4" id="object-4_2").quiz__item_3-input
+                            label(for="object-4_2").quiz__item_3-p Коммерческие, офисные помещения
+                        .quiz__item_2-checkbox
+                            input(type="checkbox" name="object-5" id="object-5_2").quiz__item_3-input
+                            label(for="object-5_2").quiz__item_3-p Другое
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 30%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-1_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-3_2").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-3_2 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60(style="max-width: 378px;") #[span.quiz__left-span  Какое количество приборов учета] вы планируете поставить на объекте?
+                        input(type="text" name="priborov" id="priborov" placeholder="Укажите количество приборов").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 50%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-2_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-4_2").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3.step#quiz-4_2 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span На каких объектах]  вы планируете устанавливать систему (системы)?
+                        p.quiz__p Можно выбрать несколько вариантов ответа
+                        .step__content
+                            .step__col
+                                .step__item(data-target="#quiz-automate")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Автоматизировать контроль и технический учет энергоресурсов на предприятии 
+                                .step__item(data-target="#quiz-glubina")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Обобщать и обрабатывать полученные данные
+                                .step__item(data-target="#quiz-apm-simple")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Понять, где и сколько предприятие потребляет энергоресурсов 
+                                .step__item(data-target="#quiz-apm")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Определить, какая смена/бригада обеспечивает более низкое энергопотребление 
+                            .step__col
+                                .step__item(data-target="#quiz-glubina")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Долговременно хранить данные и формировать отчеты по учету энергоресурсов
+                                .step__item(data-target="#quiz-apm-simple")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Отображать данные по расходу энергоресурсов на автоматизированных рабочих местах
+                                .step__item(data-target="#quiz-glubina")
+                                    input(type='checkbox').step__item-chk
+                                    .step__item-overlay Выявить, отличаются ли затраты энергии при производстве различных продуктов
+                                .step__item(data-target="#quiz-own")
+                                    input(type='checkbox').step__item-chk.step__own
+                                    .step__item-overlay Свой вариант
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons
+                    button(type='button' data-target="#quiz-3").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-own").quiz__btn.btn.quiz__next Далее
+
+
+
+            .quiz__item.quiz__item_3#quiz-own 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60 #[span.quiz__left-span Какая у вас цель внедрения АСТУЭ?] Какие аналитические функции должны быть реализованы в вашей системе?
+                        textarea(name="own-variant" placeholder="Введите вашу цель").quiz__item_5-input.step__textarea
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6_2").quiz__btn.btn.quiz__next Далее 
+
+
+                    
+            .quiz__item.quiz__item_3#quiz-glubina  
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title #[span.quiz__left-span Какова глубина] требуемого архива?
+                        p.quiz__right-p Введите цифры в годах
+                        input(type="text" name="glubina" id="glubina" placeholder="Укажите глубину").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6_2").quiz__btn.btn.quiz__next Далее 
+
+
+
+            .quiz__item.quiz__item_3#quiz-apm-simple
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60 #[span.quiz__left-span Какое количество рабочих мест (АРМ)] вы хотите использовать?
+                        input(type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6_2").quiz__btn.btn.quiz__next Далее 
+
+
+            .quiz__item.quiz__item_3#quiz-apm 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title.mb-60 #[span.quiz__left-span Какое количество рабочих мест (АРМ)] вы хотите использовать?
+                        input(type="text" name="apm-kolichestvo" id="apm-kolichestvo" placeholder="Укажите количество").quiz__item_5-input
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 80%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-glubina").quiz__btn.btn.quiz__next Далее 
+
+
+            .quiz__item.quiz__item_3#quiz-automate 
+                .quiz__item-content 
+                    .quiz__left 
+                        h2.quiz__left-title(style="max-width: 500px").mb-30 #[span.quiz__left-span Требуется ли вам управление электроприемниками?] #[br] Вам необходима только функция наблюдения или вы хотите давать обратную связь?  
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="control-electrical" id="control-electrical-yes_2").quiz__item_3-input
+                            label(for="control-electrical-yes_2").quiz__item_3-p Да
+                        .quiz__item_2-checkbox
+                            input(type="radio" name="control-electrical" id="control-electrical-no_2").quiz__item_3-input
+                            label(for="control-electrical-no_2").quiz__item_3-p Нет 
+                    .quiz__right 
+                        .quiz__right-row 
+                            .quiz__progress 
+                                .quiz__progress-track(style="width: 100%")
+                            h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела #[br] реализации ИР и НКУ
+                            p.quiz__right-p Укажите, какая именно вам необходима система? Если у вас пока нет системы технологического учета (АСТУЭ), то вы не сможете установить отдельно АСКУЭ. Возможна установка сразу обеих систем. Вы можете отметить оба варианта.
+                .quiz__buttons 
+                    button(type='button' data-target="#quiz-4_2").quiz__btn.btn.quiz__prev Назад
+                    button(type='button' data-target="#quiz-6_2").quiz__btn.btn.quiz__next Далее 
+
+
+
+            .quiz__item.quiz__item_7.last#quiz-6_2 
                 .quiz__item-content 
                     .quiz__left 
                         .quiz__left-item 
@@ -340,40 +688,36 @@ mixin quiz2()
                             h2.quiz__item-title Где удобно получить консультацию?
                             .quiz__item-socials 
                                 .quiz__item-social 
-                                    input(type="radio" name="socialMedia" id="socialMedia-12")
-                                    label(for="socialMedia-12").quiz__item-p What’s app
-                                    label(for="socialMedia-12").quiz__item-icon 
-                                        img(src="@img/whatsapp.png", alt="")
+                                    input(type="radio" name="socialMedia" id="socialMedia-1_2")
+                                    label(for="socialMedia-1_2").quiz__item-p What’s app 
+                                    label(for="socialMedia-1_2").quiz__item-icon 
+                                        img(src="@img/whatsapp.png", alt="") 
                                 .quiz__item-social 
-                                    input(type="radio" name="socialMedia" id="socialMedia-22")
-                                    label(for="socialMedia-22").quiz__item-p Telegram
-                                    label(for="socialMedia-22").quiz__item-icon 
+                                    input(type="radio" name="socialMedia" id="socialMedia-2_2")
+                                    label(for="socialMedia-2_2").quiz__item-p Telegram
+                                    label(for="socialMedia-2_2").quiz__item-icon 
                                         img(src="@img/telegram.png", alt="")
                                 .quiz__item-social 
-                                    input(type="radio" name="socialMedia" id="socialMedia-32")
-                                    label(for="socialMedia-32").quiz__item-p Zoom / Skype
-                                    label(for="socialMedia-32").quiz__item-icon 
+                                    input(type="radio" name="socialMedia" id="socialMedia-3_2")
+                                    label(for="socialMedia-3_2").quiz__item-p Zoom / Skype
+                                    label(for="socialMedia-3_2").quiz__item-icon 
                                         img(src="@img/skype.png", alt="")
                                 .quiz__item-social 
-                                    input(type="radio" name="socialMedia" id="socialMedia-42")
-                                    label(for="socialMedia-42").quiz__item-p По телефону
-                                    label(for="socialMedia-42").quiz__item-icon 
+                                    input(type="radio" name="socialMedia" id="socialMedia-4_2")
+                                    label(for="socialMedia-4_2").quiz__item-p По телефону
+                                    label(for="socialMedia-4_2").quiz__item-icon 
                                         img(src="@img/phone.png", alt="") 
                         .quiz__left-item    
                             h2.quiz__item-title Укажите ваш контактный номер
-                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input#tel2 
+                            input(type="text" name="numberPhone" placeholder="+ 7 (ххх) ххх–хх–хх").quiz__item-input#tel2
                         .quiz__left-item 
                             h2.quiz__item-title Укажите, из какой вы компании
                             input(type="text" name="company" placeholder="Поле для ответа").quiz__item-input
                     .quiz__right
                         h2.quiz__left-title #[span.quiz__left-span Ваш расчет АСКУЭ почти готов. ] Для его получения, пожалуйста, введите свои данные  
-                        .quiz__right-content
-                            .quiz__right-row.quiz__right-row_1 
-                                img(src="@img/quiz-img.png", alt="").quiz__img
-                                h2.quiz__right-title.enable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
+                        .quiz__right-content 
                             .quiz__right-row
-                                h2.quiz__right-title.disable-lg #[span.quiz__right-span Имя Фамилия,] #[br] Руководитель проектов по направлению «Системы учета»
-                                p.quiz__right-p #[span.quiz__right-primary Благодарю вас за ответы!] Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.
+                                h2.quiz__right-title.disable-lg #[span.quiz__right-span Александр Дмитриевич БОРЗЕНКОВ,] #[br] Руководитель руководитель отдела реализации ИР и НКУ
+                                p.quiz__right-p #[span.quiz__right-primary Благодарю вас за ответы!] #[br] Я расчитаю КП и свяжусь с вами в течение 1 часа. Мы работаем в будни с 09:00 до 18:00.
                 .quiz__buttons
-                    a(href="#!").quiz__btn.btn.quiz__prev Назад
-                    a(href="#!").quiz__btn.btn.quiz__next Отправить
+                    button(type='button' data-target="#quiz-6_2").quiz__btn.btn.quiz__next Отправить
